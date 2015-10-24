@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
+@import CoreLocation;
 
 static NSString * const EmailKey = @"email";
-static NSString * const PasswordKey = @"password";
 static NSString * const FirstNameKey = @"firstName";
 static NSString * const CityKey = @"city";
 static NSString * const ProfileImageKey = @"profileImage";
@@ -19,9 +19,8 @@ static NSString * const BioKey = @"bio";
 @interface User : NSObject
 
 @property (nonatomic, strong) NSString *email;
-@property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) NSString *firstName;
-@property (nonatomic, strong) NSString *city;
+@property (nonatomic, strong) CLLocation *city;
 @property (nonatomic, strong) UIImage *profileImage;
 @property (nonatomic, strong) NSString *bio;
 

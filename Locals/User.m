@@ -8,7 +8,7 @@
 
 #import "User.h"
 
-@implementation User
+   @implementation User
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 
@@ -16,7 +16,6 @@
     self = [super init];
     if (self) {
         self.email = dictionary[EmailKey];
-        self.password  = dictionary[PasswordKey];
         self.firstName = dictionary[FirstNameKey];
         self.city = dictionary[CityKey];
         self.profileImage = dictionary[ProfileImageKey];
@@ -28,7 +27,6 @@
 - (NSDictionary *)dictionaryRepresentation {
     NSDictionary *dictionary = @{
                                  EmailKey : self.email,
-                                 PasswordKey : self.password,
                                  FirstNameKey : self.firstName,
                                  CityKey : self.city,
                                  ProfileImageKey : self.profileImage,
@@ -39,4 +37,4 @@
 
 }
 
-@end
+ @end
