@@ -22,6 +22,6 @@
 
 #pragma create
 
-
+//- (Entry *)createUserWithName:(NSString *)firstName
 
 @end

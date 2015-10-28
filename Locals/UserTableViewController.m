@@ -9,6 +9,7 @@
 #import "UserTableViewController.h"
 
 @interface UserTableViewController ()
+@property (assign, nonatomic) BOOL editble;
 
 @end
 
@@ -41,15 +42,22 @@
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+#warning wrong reuse id
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+//    if (self.editble == YES) {
+//        <#statements#>
+//    } else {
+//        
+//    }
+//    
     return cell;
 }
-*/
+
+
+
 
 /*
 // Override to support conditional editing of the table view.
