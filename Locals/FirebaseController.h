@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FireBase/Firebase.h"
 
 @interface FirebaseController : NSObject
+
++ (Firebase *)base;
++ (void)Login;
++ (void)createAccount;
+
+
 
 @end

@@ -10,4 +10,18 @@
 
 @implementation UserController
 
++ (UserController *)sharedInstance {
+    static UserController *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [UserController
+                          new];
+    });
+    return sharedInstance;
+}
+
+#pragma create
+
+
+
 @end

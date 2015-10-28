@@ -11,4 +11,9 @@
 
 @interface UserController : NSObject
 
+@property (strong, nonatomic, readonly) NSArray *locals;
+
+
+
+
 @end

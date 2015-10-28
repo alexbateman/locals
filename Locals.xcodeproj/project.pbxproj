@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3617EDE81BD888EF00E7D6CF /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3617EDE71BD888EF00E7D6CF /* UserTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		365D6E781BCF449600DE20DE /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365D6E771BCF449600DE20DE /* UserController.m */; settings = {ASSET_TAGS = (); }; };
-		36C6CA3B1BCDCA1800512C79 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C6CA3A1BCDCA1800512C79 /* User.m */; settings = {ASSET_TAGS = (); }; };
+		3617EDE81BD888EF00E7D6CF /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3617EDE71BD888EF00E7D6CF /* UserTableViewController.m */; };
+		3633BF331BDC06E600E8F360 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633BF321BDC06E600E8F360 /* Firebase.framework */; };
+		3633BF351BDC072B00E8F360 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633BF341BDC072B00E8F360 /* libicucore.tbd */; };
+		3633BF371BDC073600E8F360 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633BF361BDC073600E8F360 /* Security.framework */; };
+		3633BF391BDC074800E8F360 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633BF381BDC074800E8F360 /* libc++.tbd */; };
+		3633BF3B1BDC075400E8F360 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633BF3A1BDC075400E8F360 /* CFNetwork.framework */; };
+		3633BF3D1BDC076000E8F360 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633BF3C1BDC076000E8F360 /* SystemConfiguration.framework */; };
+		365D6E781BCF449600DE20DE /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365D6E771BCF449600DE20DE /* UserController.m */; };
+		36C6CA3B1BCDCA1800512C79 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C6CA3A1BCDCA1800512C79 /* User.m */; };
 		36F0EB801BCA159B00B5D377 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F0EB7F1BCA159B00B5D377 /* main.m */; };
 		36F0EB831BCA159B00B5D377 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F0EB821BCA159B00B5D377 /* AppDelegate.m */; };
 		36F0EB861BCA159B00B5D377 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F0EB851BCA159B00B5D377 /* ViewController.m */; };
@@ -18,7 +24,7 @@
 		36F0EB8E1BCA159B00B5D377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F0EB8C1BCA159B00B5D377 /* LaunchScreen.storyboard */; };
 		36F0EB991BCA159B00B5D377 /* LocalsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F0EB981BCA159B00B5D377 /* LocalsTests.m */; };
 		36F0EBA41BCA159B00B5D377 /* LocalsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F0EBA31BCA159B00B5D377 /* LocalsUITests.m */; };
-		36F1198E1BD2C631007F432E /* FirebaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F1198D1BD2C631007F432E /* FirebaseController.m */; settings = {ASSET_TAGS = (); }; };
+		36F1198E1BD2C631007F432E /* FirebaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F1198D1BD2C631007F432E /* FirebaseController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,12 @@
 /* Begin PBXFileReference section */
 		3617EDE61BD888EF00E7D6CF /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
 		3617EDE71BD888EF00E7D6CF /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
+		3633BF321BDC06E600E8F360 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		3633BF341BDC072B00E8F360 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		3633BF361BDC073600E8F360 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3633BF381BDC074800E8F360 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3633BF3A1BDC075400E8F360 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3633BF3C1BDC076000E8F360 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		365D6E761BCF449600DE20DE /* UserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserController.h; sourceTree = "<group>"; };
 		365D6E771BCF449600DE20DE /* UserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserController.m; sourceTree = "<group>"; };
 		36C6CA391BCDCA1800512C79 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -70,6 +82,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3633BF3D1BDC076000E8F360 /* SystemConfiguration.framework in Frameworks */,
+				3633BF3B1BDC075400E8F360 /* CFNetwork.framework in Frameworks */,
+				3633BF391BDC074800E8F360 /* libc++.tbd in Frameworks */,
+				3633BF371BDC073600E8F360 /* Security.framework in Frameworks */,
+				3633BF331BDC06E600E8F360 /* Firebase.framework in Frameworks */,
+				3633BF351BDC072B00E8F360 /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +111,11 @@
 		36F0EB721BCA159B00B5D377 = {
 			isa = PBXGroup;
 			children = (
+				3633BF3C1BDC076000E8F360 /* SystemConfiguration.framework */,
+				3633BF3A1BDC075400E8F360 /* CFNetwork.framework */,
+				3633BF381BDC074800E8F360 /* libc++.tbd */,
+				3633BF361BDC073600E8F360 /* Security.framework */,
+				3633BF341BDC072B00E8F360 /* libicucore.tbd */,
 				36F0EB7D1BCA159B00B5D377 /* Locals */,
 				36F0EB971BCA159B00B5D377 /* LocalsTests */,
 				36F0EBA21BCA159B00B5D377 /* LocalsUITests */,
@@ -129,6 +152,7 @@
 				36F0EB8A1BCA159B00B5D377 /* Assets.xcassets */,
 				36F0EB8C1BCA159B00B5D377 /* LaunchScreen.storyboard */,
 				36F0EB8F1BCA159B00B5D377 /* Info.plist */,
+				3633BF321BDC06E600E8F360 /* Firebase.framework */,
 				36F0EB7E1BCA159B00B5D377 /* Supporting Files */,
 			);
 			path = Locals;
@@ -437,6 +461,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Locals",
+				);
 				INFOPLIST_FILE = Locals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Bateman.Locals";
@@ -448,6 +476,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Locals",
+				);
 				INFOPLIST_FILE = Locals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Bateman.Locals";
