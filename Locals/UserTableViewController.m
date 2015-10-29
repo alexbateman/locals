@@ -8,6 +8,8 @@
 
 #import "UserTableViewController.h"
 
+
+
 @interface UserTableViewController ()
 @property (assign, nonatomic) BOOL editble;
 
@@ -34,18 +36,20 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return 5;
+
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 #warning wrong reuse id
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
     
 //    if (self.editble == YES) {
 //        <#statements#>
@@ -54,6 +58,13 @@
 //    }
 //    
     return cell;
+}
+
+-(UITableViewCell *)cellForPhoto {
+    PhotoCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PhotoCell"];
+    cell.delegate = self;
+    
+    
 }
 
 

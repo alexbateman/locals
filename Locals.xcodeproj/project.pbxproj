@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11E8D8B21BE1B8B9000DD618 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E8D8B11BE1B8B9000DD618 /* PhotoCell.m */; };
+		11E8D8B51BE1B91D000DD618 /* NameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E8D8B41BE1B91D000DD618 /* NameCell.m */; };
+		11E8D8B81BE1B94A000DD618 /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E8D8B71BE1B94A000DD618 /* DescriptionCell.m */; };
 		3617EDE81BD888EF00E7D6CF /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3617EDE71BD888EF00E7D6CF /* UserTableViewController.m */; };
 		3633BF331BDC06E600E8F360 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633BF321BDC06E600E8F360 /* Firebase.framework */; };
 		3633BF351BDC072B00E8F360 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633BF341BDC072B00E8F360 /* libicucore.tbd */; };
@@ -45,6 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11E8D8B01BE1B8B9000DD618 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		11E8D8B11BE1B8B9000DD618 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		11E8D8B31BE1B91D000DD618 /* NameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameCell.h; sourceTree = "<group>"; };
+		11E8D8B41BE1B91D000DD618 /* NameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameCell.m; sourceTree = "<group>"; };
+		11E8D8B61BE1B94A000DD618 /* DescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionCell.h; sourceTree = "<group>"; };
+		11E8D8B71BE1B94A000DD618 /* DescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionCell.m; sourceTree = "<group>"; };
 		3617EDE61BD888EF00E7D6CF /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
 		3617EDE71BD888EF00E7D6CF /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
 		3633BF321BDC06E600E8F360 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
@@ -136,6 +145,12 @@
 		36F0EB7D1BCA159B00B5D377 /* Locals */ = {
 			isa = PBXGroup;
 			children = (
+				11E8D8B01BE1B8B9000DD618 /* PhotoCell.h */,
+				11E8D8B11BE1B8B9000DD618 /* PhotoCell.m */,
+				11E8D8B31BE1B91D000DD618 /* NameCell.h */,
+				11E8D8B41BE1B91D000DD618 /* NameCell.m */,
+				11E8D8B61BE1B94A000DD618 /* DescriptionCell.h */,
+				11E8D8B71BE1B94A000DD618 /* DescriptionCell.m */,
 				36F0EB811BCA159B00B5D377 /* AppDelegate.h */,
 				36F0EB821BCA159B00B5D377 /* AppDelegate.m */,
 				36F0EB841BCA159B00B5D377 /* ViewController.h */,
@@ -314,12 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E8D8B21BE1B8B9000DD618 /* PhotoCell.m in Sources */,
 				36F1198E1BD2C631007F432E /* FirebaseController.m in Sources */,
 				36F0EB861BCA159B00B5D377 /* ViewController.m in Sources */,
 				365D6E781BCF449600DE20DE /* UserController.m in Sources */,
+				11E8D8B51BE1B91D000DD618 /* NameCell.m in Sources */,
 				36F0EB831BCA159B00B5D377 /* AppDelegate.m in Sources */,
 				3617EDE81BD888EF00E7D6CF /* UserTableViewController.m in Sources */,
 				36C6CA3B1BCDCA1800512C79 /* User.m in Sources */,
+				11E8D8B81BE1B94A000DD618 /* DescriptionCell.m in Sources */,
 				36F0EB801BCA159B00B5D377 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
