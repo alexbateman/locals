@@ -7,6 +7,9 @@
 //
 
 #import "UserTableViewController.h"
+#import "PhotoCell.h"
+#import "NameCell.h"
+#import "DescriptionCell.h"
 
 
 
@@ -64,9 +67,20 @@
     PhotoCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PhotoCell"];
     cell.delegate = self;
     
-    
+    return cell;
 }
 
+-(UITableViewCell *)cellForFirstName {
+    NameCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NameCell"];
+    
+    return cell;
+}
+
+-(UITableViewCell *)cellForDescription {
+    DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
+    
+    return cell;
+}
 
 
 

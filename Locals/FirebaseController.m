@@ -7,6 +7,7 @@
 //
 
 #import "FirebaseController.h"
+#import "User.h"
 
 @implementation FirebaseController
 
@@ -14,7 +15,9 @@
     return [[Firebase alloc] initWithUrl:@"http://locals.firebaseIO.com"];
 }
 
-+ (void)createAccount; {
++ (void)createAccount {
+    
+[[self base] createUser:@"a" password:<#(NSString *)#> withCompletionBlock:<#^(NSError *error)block#>
     
     [[FirebaseController base] createUser:@"nil" password:@"nil"
                  withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
@@ -31,7 +34,7 @@
     
 }
 
-+ (void)Login; {
++ (void)Login {
     
     [[FirebaseController base] authUser:@"" password:@"" withCompletionBlock:^(NSError *error, FAuthData *authData) {
         //Code!
