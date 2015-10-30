@@ -17,20 +17,20 @@
 
 + (void)createAccount {
     
-[[self base] createUser:@"a" password:<#(NSString *)#> withCompletionBlock:<#^(NSError *error)block#>
-    
-    [[FirebaseController base] createUser:@"nil" password:@"nil"
-                 withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
-                     if (error) {
-                         // There was an error creating the account
-                     } else {
-                         
-                         // Successfully created an account
-                         
-                         NSString *uid = [result objectForKey:@"uid"];
-                         NSLog(@"Successfully created user account with uid: %@", uid);
-                     }
-                 }];
+//[[self base] createUser:@"" password:<#(NSString *)#> withCompletionBlock:<#^(NSError *error)block#>
+//    
+//    [[FirebaseController base] createUser:@"nil" password:@"nil"
+//                 withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
+//                     if (error) {
+//                         // There was an error creating the account
+//                     } else {
+//                         
+//                         // Successfully created an account
+//                         
+//                         NSString *uid = [result objectForKey:@"uid"];
+//                         NSLog(@"Successfully created user account with uid: %@", uid);
+//                     }
+//                 }];
     
 }
 
