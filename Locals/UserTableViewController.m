@@ -39,7 +39,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 5;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -51,21 +51,30 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 #warning wrong reuse id
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    PhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoCell" forIndexPath:indexPath];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PhotoCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
     
     
-//    if (self.editble == YES) {
-//        <#statements#>
-//    } else {
-//        
-//    }
-//    
+    
+    
     return cell;
+
 }
+
 
 -(UITableViewCell *)cellForPhoto {
     PhotoCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PhotoCell"];
-    cell.delegate = self;
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PhotoCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
     
     return cell;
 }
@@ -73,11 +82,23 @@
 -(UITableViewCell *)cellForFirstName {
     NameCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NameCell"];
     
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NameCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
     return cell;
 }
 
 -(UITableViewCell *)cellForDescription {
     DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DescriptionCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
     
     return cell;
 }
