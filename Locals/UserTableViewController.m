@@ -37,32 +37,36 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 5;
+    return 4;
 
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 #warning wrong reuse id
-    PhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoCell" forIndexPath:indexPath];
-    
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PhotoCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+    if (indexPath.row == 0) {
+       return [self cellForPhoto];
+    } else if (indexPath.row ==1) {
+       return [self cellForFirstName];
+    } else if (indexPath.row ==2) {
+        return [self cellForFirstName];
+    } else {
+        return [self cellForDescription];
     }
     
+//    PhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoCell" forIndexPath:indexPath];
     
-    
-    
-    return cell;
+//    if (cell == nil)
+//    {
+//        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PhotoCell" owner:self options:nil];
+//        cell = [nib objectAtIndex:0];
+//    }
+//    
+//    
+//    
+//    return cell;
 
 }
 
@@ -70,35 +74,17 @@
 -(UITableViewCell *)cellForPhoto {
     PhotoCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PhotoCell"];
     
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PhotoCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    
     return cell;
 }
 
 -(UITableViewCell *)cellForFirstName {
     NameCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NameCell"];
     
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NameCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    
     return cell;
 }
 
 -(UITableViewCell *)cellForDescription {
     DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
-    
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DescriptionCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
     
     return cell;
 }
