@@ -45,7 +45,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-#warning wrong reuse id
+// #warning wrong reuse id
     if (indexPath.row == 0) {
        return [self cellForPhoto];
     } else if (indexPath.row ==1) {
