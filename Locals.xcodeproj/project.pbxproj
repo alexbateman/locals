@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11C0B6D21BE54CD9001F6682 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C0B6D11BE54CD9001F6682 /* Launch Screen.storyboard */; };
 		11E8D8B21BE1B8B9000DD618 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E8D8B11BE1B8B9000DD618 /* PhotoCell.m */; };
 		11E8D8B51BE1B91D000DD618 /* NameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E8D8B41BE1B91D000DD618 /* NameCell.m */; };
 		11E8D8B81BE1B94A000DD618 /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E8D8B71BE1B94A000DD618 /* DescriptionCell.m */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11C0B6D11BE54CD9001F6682 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 		11E8D8B01BE1B8B9000DD618 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		11E8D8B11BE1B8B9000DD618 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		11E8D8B31BE1B91D000DD618 /* NameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameCell.h; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				365D6E771BCF449600DE20DE /* UserController.m */,
 				36F0EB871BCA159B00B5D377 /* Main.storyboard */,
 				36F0EB8A1BCA159B00B5D377 /* Assets.xcassets */,
+				11C0B6D11BE54CD9001F6682 /* Launch Screen.storyboard */,
 				36F0EB8F1BCA159B00B5D377 /* Info.plist */,
 				3633BF321BDC06E600E8F360 /* Firebase.framework */,
 				36F0EB7E1BCA159B00B5D377 /* Supporting Files */,
@@ -300,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C0B6D21BE54CD9001F6682 /* Launch Screen.storyboard in Resources */,
 				36F0EB8B1BCA159B00B5D377 /* Assets.xcassets in Resources */,
 				36F0EB891BCA159B00B5D377 /* Main.storyboard in Resources */,
 			);
@@ -477,6 +481,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Bateman.Locals";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -493,6 +498,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Bateman.Locals";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
