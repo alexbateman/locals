@@ -1,30 +1,29 @@
 //
-//  UserTableViewController.m
+//  LocalsTableViewController.m
 //  Locals
 //
-//  Created by Alex Bateman on 10/21/15.
+//  Created by Alexander on 11/4/15.
 //  Copyright © 2015 Alex Bateman. All rights reserved.
 //
 
-#import "UserTableViewController.h"
-#import "PhotoCell.h"
-#import "NameCell.h"
-#import "DescriptionCell.h"
+#import "LocalsTableViewController.h"
 #import "User.h"
 
-
-
-@interface UserTableViewController ()
-@property (assign, nonatomic) BOOL editble;
+@interface LocalsTableViewController ()
+@property (nonatomic,strong) User *user;
 
 @end
 
-@implementation UserTableViewController
+@implementation LocalsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.user = [User new];
+    self.user.firstName = @"Alan";
+    self.user.city = @"Hughson";
+    self.user.bio = @"Hey Im Alan, Im a great guy";
+    self.user.email = @"alan@devmountain";
     
 }
 
@@ -35,58 +34,20 @@
 
 #pragma mark - Table view data source
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
-
+#warning Incomplete implementation, return the number of rows
+    return 1;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-// #warning wrong reuse id
-    if (indexPath.row == 0) {
-       return [self cellForPhoto];
-    } else if (indexPath.row ==1) {
-       return [self cellForFirstName];
-    } else if (indexPath.row ==2) {
-        return [self cellForFirstName];
-    } else {
-        return [self cellForDescription];
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"userCell" forIndexPath:indexPath];
     
-//    PhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoCell" forIndexPath:indexPath];
-    
-//    if (cell == nil)
-//    {
-//        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PhotoCell" owner:self options:nil];
-//        cell = [nib objectAtIndex:0];
-//    }
-//    
-//    
-//    
-//    return cell;
-
-}
-
-
--(UITableViewCell *)cellForPhoto {
-    PhotoCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PhotoCell"];
+    cell.textLabel.text = self.user.firstName;
+    cell.detailTextLabel.text = self.user.city;
+    cell.imageView.image = [UIImage imageNamed:@"placeholder-square"];
     
     return cell;
 }
-
--(UITableViewCell *)cellForFirstName {
-    NameCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NameCell"];
-    
-    return cell;
-}
-
--(UITableViewCell *)cellForDescription {
-    DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
-    
-    return cell;
-}
-
 
 
 /*
