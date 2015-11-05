@@ -8,6 +8,9 @@
 
 #import "LocalsTableViewController.h"
 #import "User.h"
+#import "UserTableViewController.h"
+#import "UserController.h"
+#import "UserProfileViewController.h"
 
 @interface LocalsTableViewController ()
 @property (nonatomic,strong) User *user;
@@ -22,7 +25,7 @@
     self.user = [User new];
     self.user.firstName = @"Alan";
     self.user.city = @"Hughson";
-    self.user.bio = @"Hey Im Alan, Im a great guy";
+    self.user.bio = @"Hey Im Alan, Im a great guy!";
     self.user.email = @"alan@devmountain";
     
 }
@@ -31,6 +34,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toUserProfile"]) {
+        UserProfileViewController *userProfile = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        userProfile.user = self.user;
+        
+    }
+        
+    
+}
+
 
 #pragma mark - Table view data source
 
