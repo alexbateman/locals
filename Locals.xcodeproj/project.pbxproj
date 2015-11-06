@@ -10,6 +10,7 @@
 		11C0B6D21BE54CD9001F6682 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C0B6D11BE54CD9001F6682 /* Launch Screen.storyboard */; };
 		11E50CB21BEAECF2000AF23D /* LocalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E50CB11BEAECF2000AF23D /* LocalsTableViewController.m */; };
 		11E50CB51BEB018B000AF23D /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E50CB41BEB018B000AF23D /* UserProfileViewController.m */; };
+		11E50CBA1BEC4EAE000AF23D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E50CB91BEC4EAE000AF23D /* SignUpViewController.m */; };
 		11E8D8B21BE1B8B9000DD618 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E8D8B11BE1B8B9000DD618 /* PhotoCell.m */; };
 		11E8D8B51BE1B91D000DD618 /* NameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E8D8B41BE1B91D000DD618 /* NameCell.m */; };
 		11E8D8B81BE1B94A000DD618 /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E8D8B71BE1B94A000DD618 /* DescriptionCell.m */; };
@@ -55,6 +56,8 @@
 		11E50CB11BEAECF2000AF23D /* LocalsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalsTableViewController.m; sourceTree = "<group>"; };
 		11E50CB31BEB018B000AF23D /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
 		11E50CB41BEB018B000AF23D /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
+		11E50CB81BEC4EAE000AF23D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		11E50CB91BEC4EAE000AF23D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		11E8D8B01BE1B8B9000DD618 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		11E8D8B11BE1B8B9000DD618 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		11E8D8B31BE1B91D000DD618 /* NameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameCell.h; sourceTree = "<group>"; };
@@ -123,6 +126,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11E50CB61BEC4E18000AF23D /* VeiwControllers */ = {
+			isa = PBXGroup;
+			children = (
+				36F0EB841BCA159B00B5D377 /* ViewController.h */,
+				36F0EB851BCA159B00B5D377 /* ViewController.m */,
+				3617EDE61BD888EF00E7D6CF /* UserTableViewController.h */,
+				3617EDE71BD888EF00E7D6CF /* UserTableViewController.m */,
+				11E50CB31BEB018B000AF23D /* UserProfileViewController.h */,
+				11E50CB41BEB018B000AF23D /* UserProfileViewController.m */,
+				11E50CB01BEAECF2000AF23D /* LocalsTableViewController.h */,
+				11E50CB11BEAECF2000AF23D /* LocalsTableViewController.m */,
+				11E50CB81BEC4EAE000AF23D /* SignUpViewController.h */,
+				11E50CB91BEC4EAE000AF23D /* SignUpViewController.m */,
+			);
+			name = VeiwControllers;
+			sourceTree = "<group>";
+		};
+		11E50CB71BEC4E74000AF23D /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				11E8D8B01BE1B8B9000DD618 /* PhotoCell.h */,
+				11E8D8B11BE1B8B9000DD618 /* PhotoCell.m */,
+				11E8D8B31BE1B91D000DD618 /* NameCell.h */,
+				11E8D8B41BE1B91D000DD618 /* NameCell.m */,
+				11E8D8B61BE1B94A000DD618 /* DescriptionCell.h */,
+				11E8D8B71BE1B94A000DD618 /* DescriptionCell.m */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
 		36F0EB721BCA159B00B5D377 = {
 			isa = PBXGroup;
 			children = (
@@ -151,18 +184,10 @@
 		36F0EB7D1BCA159B00B5D377 /* Locals */ = {
 			isa = PBXGroup;
 			children = (
-				11E8D8B01BE1B8B9000DD618 /* PhotoCell.h */,
-				11E8D8B11BE1B8B9000DD618 /* PhotoCell.m */,
-				11E8D8B31BE1B91D000DD618 /* NameCell.h */,
-				11E8D8B41BE1B91D000DD618 /* NameCell.m */,
-				11E8D8B61BE1B94A000DD618 /* DescriptionCell.h */,
-				11E8D8B71BE1B94A000DD618 /* DescriptionCell.m */,
+				11E50CB71BEC4E74000AF23D /* CustomCells */,
+				11E50CB61BEC4E18000AF23D /* VeiwControllers */,
 				36F0EB811BCA159B00B5D377 /* AppDelegate.h */,
 				36F0EB821BCA159B00B5D377 /* AppDelegate.m */,
-				36F0EB841BCA159B00B5D377 /* ViewController.h */,
-				36F0EB851BCA159B00B5D377 /* ViewController.m */,
-				3617EDE61BD888EF00E7D6CF /* UserTableViewController.h */,
-				3617EDE71BD888EF00E7D6CF /* UserTableViewController.m */,
 				36F1198C1BD2C631007F432E /* FirebaseController.h */,
 				36F1198D1BD2C631007F432E /* FirebaseController.m */,
 				36C6CA391BCDCA1800512C79 /* User.h */,
@@ -170,10 +195,6 @@
 				365D6E761BCF449600DE20DE /* UserController.h */,
 				365D6E771BCF449600DE20DE /* UserController.m */,
 				36F0EB871BCA159B00B5D377 /* Main.storyboard */,
-				11E50CB31BEB018B000AF23D /* UserProfileViewController.h */,
-				11E50CB41BEB018B000AF23D /* UserProfileViewController.m */,
-				11E50CB01BEAECF2000AF23D /* LocalsTableViewController.h */,
-				11E50CB11BEAECF2000AF23D /* LocalsTableViewController.m */,
 				36F0EB8A1BCA159B00B5D377 /* Assets.xcassets */,
 				11C0B6D11BE54CD9001F6682 /* Launch Screen.storyboard */,
 				36F0EB8F1BCA159B00B5D377 /* Info.plist */,
@@ -351,6 +372,7 @@
 				36C6CA3B1BCDCA1800512C79 /* User.m in Sources */,
 				11E50CB51BEB018B000AF23D /* UserProfileViewController.m in Sources */,
 				11E8D8B81BE1B94A000DD618 /* DescriptionCell.m in Sources */,
+				11E50CBA1BEC4EAE000AF23D /* SignUpViewController.m in Sources */,
 				36F0EB801BCA159B00B5D377 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

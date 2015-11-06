@@ -12,8 +12,9 @@
 #import "UserController.h"
 #import "UserProfileViewController.h"
 
-@interface LocalsTableViewController ()
+@interface LocalsTableViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) User *user;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -28,6 +29,12 @@
     self.user.bio = @"Hey Im Alan, Im a great guy!";
     self.user.email = @"alan@devmountain";
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

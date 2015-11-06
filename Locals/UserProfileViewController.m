@@ -27,6 +27,12 @@
     [self updateWithUser:self.user];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 -(void)updateWithUser:(User *)user {
     self.name.text = user.firstName;
     self.city.text = user.city;
