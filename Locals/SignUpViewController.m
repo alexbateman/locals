@@ -7,19 +7,32 @@
 //
 
 #import "SignUpViewController.h"
+#import "User.h"
 
-@interface SignUpViewController ()
+@interface SignUpViewController ()<UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *email;
+@property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end
 
 @implementation SignUpViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.email resignFirstResponder];
+    [self.password resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,31 +15,26 @@
     return [[Firebase alloc] initWithUrl:@"http://locals.firebaseIO.com"];
 }
 
-+ (void)createAccount {
++ (void)createAccount:(NSString *)userEmail password:(NSString *)password{
     
-//[[self base] createUser:@"" password:<#(NSString *)#> withCompletionBlock:<#^(NSError *error)block#>
-//    
-//    [[FirebaseController base] createUser:@"nil" password:@"nil"
-//                 withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
-//                     if (error) {
-//                         // There was an error creating the account
-//                     } else {
-//                         
-//                         // Successfully created an account
-//                         
-//                         NSString *uid = [result objectForKey:@"uid"];
-//                         NSLog(@"Successfully created user account with uid: %@", uid);
-//                     }
-//                 }];
-    
+    [self.base createUser:userEmail password:password withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
+        if (error) {
+            // There was an error creating the account
+            NSLog(@"%@",error);
+        } else {
+            NSString *uid = [result objectForKey:@"uid"];
+            NSLog(@"Successfully created user account with uid: %@", uid);
+            
+        }
+    }];
+ 
 }
 
-+ (void)Login {
++(void) login:(NSString *)userEmail password:(NSString *)password {
     
-    [[FirebaseController base] authUser:@"" password:@"" withCompletionBlock:^(NSError *error, FAuthData *authData) {
-        //Code!
+    [self.base authUser:userEmail password:password withCompletionBlock:^(NSError *error, FAuthData *authData) {
+        NSLog(@"%@",authData);
     }];
-    
 }
 
 
