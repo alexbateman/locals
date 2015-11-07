@@ -7,7 +7,8 @@
 //
 
 #import "SignUpViewController.h"
-#import "User.h"
+#import "FirebaseController.h"
+#import "UserController.h"
 
 @interface SignUpViewController ()<UITextFieldDelegate>
 
@@ -19,13 +20,15 @@
 @implementation SignUpViewController
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.email.delegate = self;
+    self.password.delegate = self;
+    
+     [FirebaseController login:@"bateman311@gmail.com" password:@"locals123"];
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    
     
 }
 
@@ -34,6 +37,11 @@
     [self.password resignFirstResponder];
     return YES;
 }
+- (IBAction)nextButton:(id)sender {
+    
+    [FirebaseController login:self.email.text password:self.password.text];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

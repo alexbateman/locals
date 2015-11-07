@@ -37,6 +37,11 @@
     }];
 }
 
++ (NSString *) currentUserUID {
+    return [FirebaseController base].authData.uid;
+}
+
+
 
 
 

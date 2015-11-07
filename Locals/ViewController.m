@@ -13,9 +13,7 @@
 @end
 
 @implementation ViewController
-- (IBAction)gotItButton:(id)sender {
-    
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -27,7 +27,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Browse"/>
                                 <connections>
-                                    <action selector="gotItButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beb-Y4-zMy"/>
                                     <segue destination="M5f-qT-g3t" kind="presentation" id="RO7-jS-Vfh"/>
                                 </connections>
                             </button>
@@ -114,7 +113,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Cu-1G-yyv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Cu-1G-yyv">
                                 <rect key="frame" x="197" y="193" width="206" height="30"/>
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration" identifier=""/>
@@ -125,7 +124,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-97-aMK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-97-aMK">
                                 <rect key="frame" x="197" y="309" width="206" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -153,6 +152,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="nextButton:" destination="RHT-gL-zRq" eventType="touchUpInside" id="CIK-1P-9ct"/>
                                     <segue destination="r68-o8-Lvh" kind="show" id="2DH-Qj-gVw"/>
                                 </connections>
                             </button>
@@ -202,11 +202,12 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="qGV-nG-7dH">
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="city" id="qGV-nG-7dH">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <animations/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" textLabel="nNa-8P-zCw" detailTextLabel="jwd-d2-X8q" style="IBUITableViewCellStyleSubtitle" id="yZK-2s-b9u">
@@ -286,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qy8-eU-QeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="1064"/>
+            <point key="canvasLocation" x="-199" y="1040"/>
         </scene>
         <!--User Profile View Controller-->
         <scene sceneID="Gvh-HP-ZN0">
@@ -371,6 +372,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="r68-o8-Lvh" kind="showDetail" id="9sv-Uq-3MB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -400,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSz-OI-KWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1877" y="1091"/>
+            <point key="canvasLocation" x="765" y="1067"/>
         </scene>
         <!--User Table View Controller-->
         <scene sceneID="Xdt-46-Mai">
@@ -412,7 +416,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VOr-zf-YfI">
-                            <rect key="frame" x="0.0" y="518" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="558" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <animations/>
                             <items>
@@ -433,8 +437,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="221"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-3s-Vb9">
-                                            <rect key="frame" x="210" y="58" width="180" height="105"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-3s-Vb9">
+                                            <rect key="frame" x="279" y="96" width="42" height="30"/>
                                             <animations/>
                                             <state key="normal" title="Image"/>
                                         </button>
@@ -450,15 +454,15 @@
                                     <outlet property="photoButton" destination="FoN-3s-Vb9" id="I3F-SB-05Q"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameCell" rowHeight="54" id="5wl-XG-gCP" customClass="NameCell">
-                                <rect key="frame" x="0.0" y="249" width="600" height="54"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameCell" rowHeight="49" id="5wl-XG-gCP" customClass="NameCell">
+                                <rect key="frame" x="0.0" y="249" width="600" height="49"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5wl-XG-gCP" id="7nc-td-AfT">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oS0-2b-QHR">
-                                            <rect key="frame" x="192" y="16" width="216" height="30"/>
+                                            <rect key="frame" x="192" y="11" width="216" height="30"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="216" id="KNB-VX-1pT"/>
@@ -467,7 +471,7 @@
                                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhr-Hq-Oxe">
-                                            <rect key="frame" x="256" y="-5" width="88" height="21"/>
+                                            <rect key="frame" x="256" y="-10" width="88" height="21"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="88" id="tdA-jM-xyn"/>
@@ -491,19 +495,19 @@
                                     <outlet property="nameTextField" destination="oS0-2b-QHR" id="Y8v-Fr-FbH"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionCell" rowHeight="215" id="HaW-02-HLX" customClass="DescriptionCell">
-                                <rect key="frame" x="0.0" y="303" width="600" height="215"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionCell" rowHeight="260" id="HaW-02-HLX" customClass="DescriptionCell">
+                                <rect key="frame" x="0.0" y="298" width="600" height="260"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HaW-02-HLX" id="dRE-Dk-d5j">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="215"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hiR-bo-v2x">
-                                            <rect key="frame" x="140" y="0.0" width="325" height="215"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiR-bo-v2x">
+                                            <rect key="frame" x="138" y="0.0" width="325" height="260"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="325" id="lgd-B5-42l"/>
+                                                <constraint firstAttribute="width" constant="325" id="8Yd-sl-pdz"/>
                                             </constraints>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -572,7 +576,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8d-ul-1pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="318" y="1064"/>
+            <point key="canvasLocation" x="-1230" y="1040"/>
         </scene>
     </scenes>
     <resources>
@@ -580,7 +584,7 @@
         <image name="placeholder-square" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2DH-Qj-gVw"/>
-        <segue reference="qBg-CK-9T6"/>
+        <segue reference="RO7-jS-Vfh"/>
+        <segue reference="vhk-Mg-SPg"/>
     </inferredMetricsTieBreakers>
 </document>

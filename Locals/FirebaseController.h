@@ -12,11 +12,8 @@
 @interface FirebaseController : NSObject
 
 + (Firebase *)base;
-+ (void)Login;
-+ (void)createAccount;
-
-
-+(void) creatAccount:(NSString *)userEmail password:(NSString *)password;
++(void) createAccount:(NSString *)userEmail password:(NSString *)password;
 +(void) login:(NSString *)userEmail password:(NSString *)password;
++ (NSString *) currentUserUID;
 
 @end
