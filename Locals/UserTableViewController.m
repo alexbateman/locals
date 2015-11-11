@@ -11,6 +11,7 @@
 #import "NameCell.h"
 #import "DescriptionCell.h"
 #import "User.h"
+#import "FirebaseController.h"
 
 
 
@@ -23,8 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     
 }
 

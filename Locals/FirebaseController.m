@@ -13,7 +13,10 @@
 
 + (Firebase *)base {
     return [[Firebase alloc] initWithUrl:@"http://locals.firebaseIO.com"];
+    
 }
+
+
 
 + (void)createAccount:(NSString *)userEmail password:(NSString *)password{
     
@@ -36,6 +39,13 @@
         NSLog(@"%@",authData);
     }];
 }
+
++ (Firebase *)userProfile {
+    return [[[FirebaseController base] childByAppendingPath:@"UserProfile/"] childByAppendingPath:[FirebaseController currentUserUID]];
+}
+
+
+
 
 + (NSString *) currentUserUID {
     return [FirebaseController base].authData.uid;

@@ -373,7 +373,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="r68-o8-Lvh" kind="showDetail" id="9sv-Uq-3MB"/>
+                                    <segue destination="r68-o8-Lvh" kind="show" id="LSQ-WZ-2bs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -416,7 +416,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VOr-zf-YfI">
-                            <rect key="frame" x="0.0" y="558" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="622" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <animations/>
                             <items>
@@ -431,7 +431,7 @@
                         </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="221" id="FB8-k1-etA" customClass="PhotoCell">
-                                <rect key="frame" x="0.0" y="28" width="600" height="221"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="221"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FB8-k1-etA" id="PiE-PF-wBD">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="221"/>
@@ -455,7 +455,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameCell" rowHeight="49" id="5wl-XG-gCP" customClass="NameCell">
-                                <rect key="frame" x="0.0" y="249" width="600" height="49"/>
+                                <rect key="frame" x="0.0" y="313" width="600" height="49"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5wl-XG-gCP" id="7nc-td-AfT">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
@@ -496,7 +496,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionCell" rowHeight="260" id="HaW-02-HLX" customClass="DescriptionCell">
-                                <rect key="frame" x="0.0" y="298" width="600" height="260"/>
+                                <rect key="frame" x="0.0" y="362" width="600" height="260"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HaW-02-HLX" id="dRE-Dk-d5j">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
@@ -585,6 +585,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RO7-jS-Vfh"/>
-        <segue reference="vhk-Mg-SPg"/>
+        <segue reference="LSQ-WZ-2bs"/>
     </inferredMetricsTieBreakers>
 </document>

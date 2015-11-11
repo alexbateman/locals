@@ -7,6 +7,7 @@
 //
 
 #import "UserController.h"
+#import "FirebaseController.h"
 
 @implementation UserController
 
@@ -18,6 +19,15 @@
                           new];
     });
     return sharedInstance;
+}
+
+- (void)loadFromPersistantStorage {
+    
+    Firebase *base = [[Firebase alloc] initWithUrl:@"http://locals.firebaseIO.com/"];
+    
+    [base observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        
+    }];
 }
 
 #pragma create
