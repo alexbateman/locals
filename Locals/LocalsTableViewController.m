@@ -35,6 +35,7 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    // This hides the navigation controller
 }
 
 - (void)didReceiveMemoryWarning {

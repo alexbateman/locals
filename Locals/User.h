@@ -23,6 +23,7 @@ static NSString * const BioKey = @"bio";
 @property (nonatomic, strong) NSString *city;
 @property (nonatomic, strong) UIImage *profileImage;
 @property (nonatomic, strong) NSString *bio;
+@property (nonatomic, strong) NSString *UID;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

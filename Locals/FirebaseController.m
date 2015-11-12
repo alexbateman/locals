@@ -8,6 +8,8 @@
 
 #import "FirebaseController.h"
 #import "User.h"
+#import "UserController.h"
+
 
 @implementation FirebaseController
 
@@ -25,9 +27,7 @@
             // There was an error creating the account
             NSLog(@"%@",error);
         } else {
-            NSString *uid = [result objectForKey:@"uid"];
-            NSLog(@"Successfully created user account with uid: %@", uid);
-            
+            [self login:userEmail password:password];
         }
     }];
  
@@ -37,6 +37,16 @@
     
     [self.base authUser:userEmail password:password withCompletionBlock:^(NSError *error, FAuthData *authData) {
         NSLog(@"%@",authData);
+        
+        if (error) {
+            
+            NSLog(@"%@", error);
+            
+        } else {
+            [FirebaseController userProfile];
+        }
+        
+     
     }];
 }
 
@@ -45,13 +55,27 @@
 }
 
 
-
-
 + (NSString *) currentUserUID {
     return [FirebaseController base].authData.uid;
 }
 
++ (void)fetchCurrentUser:(NSString *)email {
+    [FirebaseController userProfile] observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        NSDictionary *userDictionary;
+        if ([snapshot.value isKindOfClass:[NSNull class]]) {
+            User *newUserProfile = [[UserController sharedInstance] createUser:email uid:[self currentUserUID]];
+            userDictionary = newUserProfile.dictionaryRepresentation;
+            
+        } else if([snapshot.value isKindOfClass:[NSDictionary class]]) {
+            userDictionary = snapshot.value;
+        }
+        [[UserController sharedInstance] setCurrentUser:userDictionary];
+        [[UserController sharedInstance] ]
+            
+        }
+    }
 
+}
 
 
 

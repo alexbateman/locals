@@ -15,5 +15,6 @@
 +(void) createAccount:(NSString *)userEmail password:(NSString *)password;
 +(void) login:(NSString *)userEmail password:(NSString *)password;
 + (NSString *) currentUserUID;
++ (Firebase *)userProfile;
 
 @end

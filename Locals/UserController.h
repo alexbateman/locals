@@ -13,6 +13,10 @@
 
 @property (strong, nonatomic, readonly) NSArray *locals;
 
++ (UserController *)sharedInstance;
+-(User *)createUser:(NSString *)email uid:(NSString *)UID;
+- (void)setCurrentUser:(NSDictionary *)dictionary;
+
 
 
 

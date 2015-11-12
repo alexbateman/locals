@@ -9,6 +9,12 @@
 #import "UserController.h"
 #import "FirebaseController.h"
 
+@interface UserController()
+
+@property (strong, nonatomic)User *currentUser;
+
+@end
+
 @implementation UserController
 
 + (UserController *)sharedInstance {
@@ -21,17 +27,31 @@
     return sharedInstance;
 }
 
-- (void)loadFromPersistantStorage {
-    
-    Firebase *base = [[Firebase alloc] initWithUrl:@"http://locals.firebaseIO.com/"];
-    
-    [base observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        
-    }];
-}
+
 
 #pragma create
 
-//- (Entry *)createUserWithName:(NSString *)firstName
+-(User *)createUser:(NSString *)email uid:(NSString *)UID {
+    
+    User *user = [User new];
+    user.email = email;
+    user.UID = UID;
+    
+    self.currentUser = user;
+    
+    return user;
+    
+}
+
+- (void)setCurrentUser:(NSDictionary *)dictionary {
+    
+    User *currentUser = [[User alloc] initWithDictionary:dictionary];
+    self.currentUser = currentUser;
+}
+
+- (void)saveCurrentUser {
+    [[FirebaseController userProfile] setValue:self.currentUser.dictionaryRepresentation];
+    
+}
 
 @end

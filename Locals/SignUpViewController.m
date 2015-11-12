@@ -19,6 +19,11 @@
 
 @implementation SignUpViewController
 
+- (IBAction)signUpButton:(id)sender {
+    
+    [FirebaseController createAccount:self.email.text password:self.password.text];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
