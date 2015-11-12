@@ -16,6 +16,7 @@
 + (UserController *)sharedInstance;
 -(User *)createUser:(NSString *)email uid:(NSString *)UID;
 - (void)setCurrentUser:(NSDictionary *)dictionary;
+- (void)saveCurrentUser;
 
 
 
