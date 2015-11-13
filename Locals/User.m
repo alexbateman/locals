@@ -15,6 +15,7 @@
 {
     self = [super init];
     if (self) {
+
         self.email = dictionary[EmailKey];
         self.firstName = dictionary[FirstNameKey];
         self.city = dictionary[CityKey];
@@ -25,13 +26,23 @@
     return self;
 }
 - (NSDictionary *)dictionaryRepresentation {
-    NSDictionary *dictionary = @{
-                                 EmailKey : self.email,
-                                 FirstNameKey : self.firstName,
-                                 CityKey : self.city,
-                                 ProfileImageKey : self.profileImage,
-                                 BioKey : self.bio,
-                                 };
+    NSMutableDictionary *dictionary = [NSMutableDictionary new];
+    
+    if (self.email) {
+        [dictionary setObject:self.email forKey:EmailKey];
+    }
+    if (self.firstName) {
+        [dictionary setObject:self.firstName forKey:FirstNameKey];
+    }
+    if (self.city) {
+        [dictionary setObject:self.city forKey:CityKey];
+    }
+    if (self.profileImage) {
+        [dictionary setObject:self.profileImage forKey:ProfileImageKey];
+    }
+    if (self.bio) {
+        [dictionary setObject:self.bio forKey:BioKey];
+    }
     
     return dictionary;
 

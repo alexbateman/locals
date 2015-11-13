@@ -422,10 +422,9 @@
                             <animations/>
                             <items>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="2sf-yR-JfZ"/>
-                                <barButtonItem title="Submit" id="3P5-de-2OG">
+                                <barButtonItem title="Submit" id="YjT-yv-XpQ">
                                     <connections>
-                                        <action selector="submitButton:" destination="r68-o8-Lvh" id="Bo7-jn-DUS"/>
-                                        <segue destination="M5f-qT-g3t" kind="show" id="qBg-CK-9T6"/>
+                                        <action selector="submitButton:" destination="r68-o8-Lvh" id="zC9-tI-E3N"/>
                                     </connections>
                                 </barButtonItem>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="K2u-uA-5Rw"/>
@@ -471,6 +470,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            <connections>
+                                                <action selector="textCell:" destination="5wl-XG-gCP" eventType="editingDidEnd" id="v47-11-PIU"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhr-Hq-Oxe">
                                             <rect key="frame" x="256" y="-10" width="88" height="21"/>
@@ -535,6 +537,9 @@
                             <outlet property="delegate" destination="r68-o8-Lvh" id="3mr-Gn-yL7"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="M5f-qT-g3t" kind="show" identifier="navSegue" id="VUN-vo-eF1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzy-EZ-Csw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -585,7 +590,7 @@
         <image name="placeholder-square" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qBg-CK-9T6"/>
         <segue reference="2DH-Qj-gVw"/>
+        <segue reference="VUN-vo-eF1"/>
     </inferredMetricsTieBreakers>
 </document>

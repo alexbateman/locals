@@ -17,8 +17,11 @@
 
 
 
-@interface UserTableViewController ()
+@interface UserTableViewController ()<nameDelegate>
 @property (assign, nonatomic) BOOL editble;
+@property (strong, nonatomic) NSString *firstName;
+@property (strong, nonatomic) NSString *city;
+@property (strong, nonatomic) NSString *bio;
 
 @end
 
@@ -46,10 +49,18 @@
 
 - (IBAction)submitButton:(id)sender {
     User *user = [User new];
+    user.firstName = self.firstName;
+    [[UserController sharedInstance] createUser:user];
     
-//    user.firstName = 
+    [self performSegueWithIdentifier:@"navSegue" sender:sender];
     
 }
+
+-(void)textChanged:(NameCell *)cell {
+    self.firstName = cell.nameTextField.text;
+}
+
+
 
 
 #pragma mark - Table view data source
@@ -96,6 +107,7 @@
 
 -(UITableViewCell *)cellForFirstName {
     NameCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NameCell"];
+    cell.delegate = self;
     
     return cell;
 }

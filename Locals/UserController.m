@@ -49,7 +49,7 @@
 
 
 - (void)saveCurrentUser {
-    [[FirebaseController userProfile] setValue:self.currentUserProfile.dictionaryRepresentation];
+    [[FirebaseController userProfile] setValue:[self.currentUserProfile dictionaryRepresentation]];
 }
 
 

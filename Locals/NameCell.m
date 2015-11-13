@@ -17,6 +17,9 @@
     
     self.nameTextField.delegate = self;
 }
+- (IBAction)textCell:(id)sender {
+    [self.delegate textChanged:self];
+}
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.nameTextField resignFirstResponder];
