@@ -16,7 +16,6 @@
 #import "UserController.h"
 
 
-
 @interface UserTableViewController ()<nameDelegate>
 @property (assign, nonatomic) BOOL editble;
 @property (strong, nonatomic) NSString *firstName;

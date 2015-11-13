@@ -18,8 +18,6 @@
     
 }
 
-
-
 + (void)createAccount:(NSString *)userEmail password:(NSString *)password{
     
     [self.base createUser:userEmail password:password withValueCompletionBlock:^(NSError *error, NSDictionary *result) {

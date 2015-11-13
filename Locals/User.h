@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
-@import CoreLocation;
 
 static NSString * const EmailKey = @"email";
 static NSString * const FirstNameKey = @"firstName";

@@ -21,6 +21,4 @@ static NSString *currentProfileLoadedNotification = @"currentProfileLoaded";
 - (void)saveCurrentUser;
 
 
-
-
 @end

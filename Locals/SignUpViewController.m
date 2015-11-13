@@ -31,8 +31,6 @@
     self.email.delegate = self;
     self.password.delegate = self;
     
-     [FirebaseController login:@"bateman311@gmail.com" password:@"locals123"];
-    
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
 }
