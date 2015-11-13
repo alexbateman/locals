@@ -1,5 +1,5 @@
 //
-//  ProfileController.m
+//  UserController.m
 //  Locals
 //
 //  Created by Alex Bateman on 10/14/15.
@@ -8,10 +8,12 @@
 
 #import "UserController.h"
 #import "FirebaseController.h"
+#import "User.h"
+
 
 @interface UserController()
 
-@property (strong, nonatomic)User *currentUser;
+@property (strong, nonatomic)User *currentUserProfile;
 
 @end
 
@@ -31,14 +33,10 @@
 
 #pragma create
 
--(User *)createUser:(NSString *)email uid:(NSString *)UID {
+-(User *)createUser: (User *)user {
     
-    User *user = [User new];
-    user.email = email;
-    user.UID = UID;
-    
-    self.currentUser = user;
-    
+    self.currentUserProfile = user;
+    [self saveCurrentUser];
     return user;
     
 }
@@ -46,12 +44,15 @@
 - (void)setCurrentUser:(NSDictionary *)dictionary {
     
     User *currentUser = [[User alloc] initWithDictionary:dictionary];
-    self.currentUser = currentUser;
+    self.currentUserProfile = currentUser;
 }
 
+
 - (void)saveCurrentUser {
-    [[FirebaseController userProfile] setValue:self.currentUser.dictionaryRepresentation];
-    
+    [[FirebaseController userProfile] setValue:self.currentUserProfile.dictionaryRepresentation];
 }
+
+
+
 
 @end

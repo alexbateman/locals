@@ -8,10 +8,20 @@
 
 #import "NameCell.h"
 
+
+
 @implementation NameCell
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.nameTextField.delegate = self;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.nameTextField resignFirstResponder];
+    
+    return YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

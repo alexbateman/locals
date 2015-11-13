@@ -12,6 +12,8 @@
 #import "DescriptionCell.h"
 #import "User.h"
 #import "FirebaseController.h"
+#import "UserProfileViewController.h"
+#import "UserController.h"
 
 
 
@@ -22,8 +24,14 @@
 
 @implementation UserTableViewController
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self registerForNotifications];
     
 }
 
@@ -31,6 +39,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)registerForNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateWithUser:) name:currentProfileLoadedNotification object:nil];
+}
+
+- (IBAction)submitButton:(id)sender {
+    User *user = [User new];
+    
+//    user.firstName = 
+    
+}
+
 
 #pragma mark - Table view data source
 
@@ -48,7 +68,7 @@
     } else if (indexPath.row ==1) {
        return [self cellForFirstName];
     } else if (indexPath.row ==2) {
-        return [self cellForFirstName];
+        return [self cellForCity];
     } else {
         return [self cellForDescription];
     }
@@ -79,12 +99,20 @@
     
     return cell;
 }
+-(UITableViewCell *)cellForCity {
+    NameCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NameCell"];
+    cell.firstNameLabel.text = @"City";
+    
+    return cell;
+}
 
 -(UITableViewCell *)cellForDescription {
     DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
     
     return cell;
 }
+
+
 
 
 

@@ -63,8 +63,8 @@
     [[FirebaseController userProfile] observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSDictionary *userDictionary;
         if ([snapshot.value isKindOfClass:[NSNull class]]) {
-            User *newUserProfile = [[UserController sharedInstance] createUser:email uid:[self currentUserUID]];
-            userDictionary = newUserProfile.dictionaryRepresentation;
+//            User *newUserProfile = [[UserController sharedInstance] createUser:email uid:[self currentUserUID]];
+//            userDictionary = newUserProfile.dictionaryRepresentation;
             
         } else if([snapshot.value isKindOfClass:[NSDictionary class]]) {
             userDictionary = snapshot.value;
@@ -72,9 +72,14 @@
         [[UserController sharedInstance] setCurrentUser:userDictionary];
         [[UserController sharedInstance] saveCurrentUser];
         
+        [[NSNotificationCenter defaultCenter] postNotificationName:currentProfileLoadedNotification object:nil];
+    } withCancelBlock:^(NSError *error) {
+        // Do nothing for now
+        
     }];
     
 }
+
 
 
 @end

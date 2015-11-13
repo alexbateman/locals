@@ -1,5 +1,5 @@
 //
-//  ProfileController.h
+//  UserController.h
 //  Locals
 //
 //  Created by Alex Bateman on 10/14/15.
@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "User.h"
 
+static NSString *currentProfileLoadedNotification = @"currentProfileLoaded";
+
 @interface UserController : NSObject
 
 @property (strong, nonatomic, readonly) NSArray *locals;
 
 + (UserController *)sharedInstance;
--(User *)createUser:(NSString *)email uid:(NSString *)UID;
+-(User *)createUser: (User *)user;
 - (void)setCurrentUser:(NSDictionary *)dictionary;
 - (void)saveCurrentUser;
 
