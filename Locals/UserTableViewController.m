@@ -16,7 +16,7 @@
 #import "UserController.h"
 
 
-@interface UserTableViewController ()<nameDelegate>
+@interface UserTableViewController ()<nameDelegate, descriptionDelegate>
 @property (assign, nonatomic) BOOL editble;
 @property (strong, nonatomic) NSString *firstName;
 @property (strong, nonatomic) NSString *city;
@@ -49,6 +49,8 @@
 - (IBAction)submitButton:(id)sender {
     User *user = [User new];
     user.firstName = self.firstName;
+    user.city = self.city;
+    user.bio = self.bio;
     [[UserController sharedInstance] createUser:user];
     
     [self performSegueWithIdentifier:@"navSegue" sender:sender];
@@ -56,7 +58,13 @@
 }
 
 -(void)textChanged:(NameCell *)cell {
-    self.firstName = cell.nameTextField.text;
+    NSIndexPath *path = [self.tableView indexPathForCell:cell];
+    if (path.row == 1) {
+        self.firstName = cell.nameTextField.text;
+
+    } else {
+        self.city = cell.nameTextField.text;
+    }
 }
 
 
@@ -113,13 +121,14 @@
 -(UITableViewCell *)cellForCity {
     NameCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NameCell"];
     cell.firstNameLabel.text = @"City";
+    cell.delegate = self;
     
     return cell;
 }
 
 -(UITableViewCell *)cellForDescription {
     DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
-    
+    cell.delegate = self;
     return cell;
 }
 

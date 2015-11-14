@@ -12,6 +12,12 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.descriptionTextField.delegate = self;
+}
+
+-(void)textViewDidChange:(UITextView *)textView {
+    [self.delegate textChanged:self];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

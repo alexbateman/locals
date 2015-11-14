@@ -17,8 +17,10 @@
     
     self.nameTextField.delegate = self;
 }
-- (IBAction)textCell:(id)sender {
+
+- (IBAction)editingChanged:(id)sender {
     [self.delegate textChanged:self];
+
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {

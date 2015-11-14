@@ -12,7 +12,7 @@
 static NSString * const EmailKey = @"email";
 static NSString * const FirstNameKey = @"firstName";
 static NSString * const CityKey = @"city";
-static NSString * const ProfileImageKey = @"profileImage";
+static NSData * const ProfileImageKey = @"profileImage";
 static NSString * const BioKey = @"bio";
 
 @interface User : NSObject
@@ -20,7 +20,7 @@ static NSString * const BioKey = @"bio";
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *city;
-@property (nonatomic, strong) UIImage *profileImage;
+@property (nonatomic, strong) NSData *profileImage;
 @property (nonatomic, strong) NSString *bio;
 @property (nonatomic, strong) NSString *UID;
 
