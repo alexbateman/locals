@@ -113,7 +113,11 @@
 
 -(UITableViewCell *)cellForPhoto {
     PhotoCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PhotoCell"];
-    
+    cell.delegate = self;
+    if (self.photo) {
+        UIImage *image = [UIImage imageWithData:self.photo];
+        [cell.photoButton setImage:image forState:UIControlStateNormal];
+    }
     return cell;
 }
 
@@ -182,7 +186,7 @@
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    UIImage *image = [info objectForKey:@"UIImagePcikerControllerOriginalImage"];
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
     
