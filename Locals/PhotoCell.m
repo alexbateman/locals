@@ -12,6 +12,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.photoButton.frame = CGRectMake(0,0,100,100);
+    self.photoButton.clipsToBounds = YES;
+    self.photoButton.layer.cornerRadius = 100/2.0f;
+    self.photoButton.layer.borderColor=[UIColor blackColor].CGColor;
+    self.photoButton.layer.borderWidth=2.0f;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -19,5 +24,12 @@
 
     // Configure the view for the selected state
 }
+
+- (IBAction)PhotoButtonTapped:(id)sender {
+    [self.delegate photoCellButtonTapped];
+}
+
+
+
 
 @end

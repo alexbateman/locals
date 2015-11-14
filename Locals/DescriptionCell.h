@@ -19,7 +19,7 @@
 
 @protocol descriptionDelegate
 
--(void)textChanged: (DescriptionCell *)cell;
+-(void)textViewChanged: (DescriptionCell *)cell;
 
 
 @end

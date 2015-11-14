@@ -16,11 +16,12 @@
 #import "UserController.h"
 
 
-@interface UserTableViewController ()<nameDelegate, descriptionDelegate>
+@interface UserTableViewController ()<nameDelegate, descriptionDelegate, PhotoCellDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (assign, nonatomic) BOOL editble;
 @property (strong, nonatomic) NSString *firstName;
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *bio;
+@property (strong, nonatomic) NSData *photo;
 
 @end
 
@@ -66,6 +67,10 @@
         self.city = cell.nameTextField.text;
     }
 }
+-(void)textViewChanged:(DescriptionCell *)cell {
+    self.bio = cell.descriptionTextField.text;
+}
+
 
 
 
@@ -130,6 +135,61 @@
     DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
     cell.delegate = self;
     return cell;
+}
+
+-(void)photoCellButtonTapped {
+   
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+    imagePicker.delegate = self;
+    
+    UIAlertController *photoActionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *cameraRollAction = [UIAlertAction actionWithTitle:@"From Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }];
+    [photoActionSheet addAction:cameraRollAction];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [photoActionSheet addAction:cancelAction];
+    
+    UIAlertAction *takePictureAction = [UIAlertAction actionWithTitle:@"Take Picture" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == YES) {
+            imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+            imagePicker.allowsEditing = YES;
+            
+            [self presentViewController:imagePicker animated:YES completion:nil];
+        }
+        else {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Camera Not Available on Device" message:@"This device does not have a camera option. Please choose photo from library." preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }];
+            [alert addAction:dismissAction];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }];
+    
+    [photoActionSheet addAction:takePictureAction];
+    
+    [self presentViewController:photoActionSheet animated:YES completion:nil];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    UIImage *image = [info objectForKey:@"UIImagePcikerControllerOriginalImage"];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    self.photo = UIImageJPEGRepresentation(image, 0.8);
+    
+    [self.tableView reloadData];
+    
 }
 
 

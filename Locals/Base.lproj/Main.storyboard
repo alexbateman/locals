@@ -439,15 +439,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-3s-Vb9">
-                                            <rect key="frame" x="279" y="96" width="42" height="30"/>
+                                            <rect key="frame" x="225" y="36" width="150" height="150"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="QPn-qW-YUw"/>
+                                            </constraints>
                                             <state key="normal" title="Image"/>
+                                            <connections>
+                                                <action selector="PhotoButtonTapped:" destination="FB8-k1-etA" eventType="touchUpInside" id="WLb-l4-hV5"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="centerX" secondItem="PiE-PF-wBD" secondAttribute="centerX" id="aYK-P3-jiO"/>
-                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="centerY" secondItem="PiE-PF-wBD" secondAttribute="centerY" id="z3Z-vB-mxl"/>
+                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="top" secondItem="PiE-PF-wBD" secondAttribute="topMargin" constant="28" id="A7F-Fw-33z"/>
+                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="centerX" secondItem="PiE-PF-wBD" secondAttribute="centerX" id="ZZs-Sx-EPn"/>
+                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="centerY" secondItem="PiE-PF-wBD" secondAttribute="centerY" id="sQu-Xi-7Iu"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>

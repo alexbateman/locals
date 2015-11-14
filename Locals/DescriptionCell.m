@@ -17,8 +17,15 @@
 }
 
 -(void)textViewDidChange:(UITextView *)textView {
-    [self.delegate textChanged:self];
+    [self.delegate textViewChanged:self];
 }
+
+-(BOOL)textViewShouldReturn:(UITextField *)textField {
+    [self.descriptionTextField resignFirstResponder];
+    
+    return YES;
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

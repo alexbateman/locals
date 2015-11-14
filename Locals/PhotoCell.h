@@ -18,7 +18,7 @@
 
 @end
 
-@protocol PhotoCellDelegate <NSObject>
+@protocol PhotoCellDelegate
 - (void)photoCellButtonTapped;
 
 @end
