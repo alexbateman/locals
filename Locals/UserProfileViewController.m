@@ -15,8 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *city;
 @property (weak, nonatomic) IBOutlet UILabel *bio;
 
-
-
 @end
 
 @implementation UserProfileViewController
@@ -43,6 +41,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

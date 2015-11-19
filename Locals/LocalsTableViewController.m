@@ -24,10 +24,10 @@
     [super viewDidLoad];
     
     self.user = [User new];
-    self.user.firstName = @"Alan";
-    self.user.city = @"Hughson";
-    self.user.bio = @"Hey Im Alan, Im a great guy!";
-    self.user.email = @"alan@devmountain";
+    self.user.firstName = @"Alex";
+    self.user.city = @"Provo";
+    self.user.bio = @"Hey Im Alex, and I love all that my NYC has to offer! I am all about going out at night, grabbing some pizza, hitting up a concert, and hitting up local shops.";
+    self.user.email = @"alex@localsapp.com";
     
 }
 
@@ -46,7 +46,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toUserProfile"]) {
         UserProfileViewController *userProfile = segue.destinationViewController;
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+      //  NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         userProfile.user = self.user;
         
     }

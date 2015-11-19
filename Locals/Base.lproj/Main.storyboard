@@ -122,7 +122,7 @@
                                     <constraint firstAttribute="width" constant="206" id="Fnf-4i-1za"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-97-aMK">
                                 <rect key="frame" x="197" y="309" width="206" height="30"/>
@@ -131,7 +131,7 @@
                                     <constraint firstAttribute="height" constant="30" id="RtT-Qa-4cA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIX-OM-Njb">
                                 <rect key="frame" x="229" y="52" width="143" height="46"/>
@@ -288,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qy8-eU-QeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199" y="1040"/>
+            <point key="canvasLocation" x="-289" y="1060"/>
         </scene>
         <!--User Profile View Controller-->
         <scene sceneID="Gvh-HP-ZN0">
@@ -309,6 +309,11 @@
                                     <constraint firstAttribute="height" constant="166" id="11g-ba-snG"/>
                                     <constraint firstAttribute="width" constant="231" id="C4r-PH-ZTA"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE6-kX-Hh9">
                                 <rect key="frame" x="275" y="267" width="51" height="21"/>
@@ -405,7 +410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSz-OI-KWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765" y="1067"/>
+            <point key="canvasLocation" x="749" y="1085"/>
         </scene>
         <!--User Table View Controller-->
         <scene sceneID="Xdt-46-Mai">
@@ -417,7 +422,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VOr-zf-YfI">
-                            <rect key="frame" x="0.0" y="558" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="622" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <animations/>
                             <items>
@@ -432,19 +437,26 @@
                         </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="221" id="FB8-k1-etA" customClass="PhotoCell">
-                                <rect key="frame" x="0.0" y="28" width="600" height="221"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="221"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FB8-k1-etA" id="PiE-PF-wBD">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="221"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-3s-Vb9">
-                                            <rect key="frame" x="225" y="36" width="150" height="150"/>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-3s-Vb9">
+                                            <rect key="frame" x="200" y="11" width="200" height="200"/>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="150" id="QPn-qW-YUw"/>
-                                            </constraints>
-                                            <state key="normal" title="Image"/>
+                                            <state key="normal" title="Image">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="50"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="PhotoButtonTapped:" destination="FB8-k1-etA" eventType="touchUpInside" id="WLb-l4-hV5"/>
                                             </connections>
@@ -452,9 +464,9 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="top" secondItem="PiE-PF-wBD" secondAttribute="topMargin" constant="28" id="A7F-Fw-33z"/>
-                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="centerX" secondItem="PiE-PF-wBD" secondAttribute="centerX" id="ZZs-Sx-EPn"/>
-                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="centerY" secondItem="PiE-PF-wBD" secondAttribute="centerY" id="sQu-Xi-7Iu"/>
+                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="top" secondItem="PiE-PF-wBD" secondAttribute="topMargin" constant="3" id="CGv-Ep-5zI"/>
+                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="centerX" secondItem="PiE-PF-wBD" secondAttribute="centerX" id="LaO-rM-Puc"/>
+                                        <constraint firstItem="FoN-3s-Vb9" firstAttribute="centerY" secondItem="PiE-PF-wBD" secondAttribute="centerY" id="rbt-lv-cTp"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
@@ -463,7 +475,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameCell" rowHeight="49" id="5wl-XG-gCP" customClass="NameCell">
-                                <rect key="frame" x="0.0" y="249" width="600" height="49"/>
+                                <rect key="frame" x="0.0" y="313" width="600" height="49"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5wl-XG-gCP" id="7nc-td-AfT">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
@@ -507,7 +519,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionCell" rowHeight="260" id="HaW-02-HLX" customClass="DescriptionCell">
-                                <rect key="frame" x="0.0" y="298" width="600" height="260"/>
+                                <rect key="frame" x="0.0" y="362" width="600" height="260"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HaW-02-HLX" id="dRE-Dk-d5j">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
@@ -521,7 +533,7 @@
                                                 <constraint firstAttribute="width" constant="325" id="8Yd-sl-pdz"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                         </textView>
                                     </subviews>
                                     <animations/>
@@ -589,7 +601,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8d-ul-1pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1230" y="1040"/>
+            <point key="canvasLocation" x="-1220" y="1060"/>
         </scene>
     </scenes>
     <resources>
@@ -597,7 +609,7 @@
         <image name="placeholder-square" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2DH-Qj-gVw"/>
         <segue reference="VUN-vo-eF1"/>
+        <segue reference="LSQ-WZ-2bs"/>
     </inferredMetricsTieBreakers>
 </document>

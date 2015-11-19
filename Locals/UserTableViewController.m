@@ -21,7 +21,7 @@
 @property (strong, nonatomic) NSString *firstName;
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *bio;
-@property (strong, nonatomic) NSData *photo;
+@property (strong, nonatomic) NSString *photo;
 
 @end
 
@@ -35,6 +35,7 @@
     [super viewDidLoad];
     
     [self registerForNotifications];
+    [FirebaseController fetchCurrentUser];
     
 }
 
@@ -44,7 +45,7 @@
 }
 
 - (void)registerForNotifications {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateWithUser:) name:currentProfileLoadedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateWithProfile) name:currentProfileLoadedNotification object:nil];
 }
 
 - (IBAction)submitButton:(id)sender {
@@ -72,9 +73,6 @@
 }
 
 
-
-
-
 #pragma mark - Table view data source
 
 
@@ -82,7 +80,6 @@
     return 4;
 
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 // #warning wrong reuse id
@@ -95,18 +92,7 @@
     } else {
         return [self cellForDescription];
     }
-    
-//    PhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoCell" forIndexPath:indexPath];
-    
-//    if (cell == nil)
-//    {
-//        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PhotoCell" owner:self options:nil];
-//        cell = [nib objectAtIndex:0];
-//    }
-//    
-//    
-//    
-//    return cell;
+
 
 }
 
@@ -115,6 +101,7 @@
     PhotoCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PhotoCell"];
     cell.delegate = self;
     if (self.photo) {
+#warning fix your photo mess
         UIImage *image = [UIImage imageWithData:self.photo];
         [cell.photoButton setImage:image forState:UIControlStateNormal];
     }
@@ -124,6 +111,10 @@
 -(UITableViewCell *)cellForFirstName {
     NameCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NameCell"];
     cell.delegate = self;
+    
+    if (self.firstName) {
+        cell.nameTextField.text = self.firstName;
+    }
     
     return cell;
 }
@@ -139,6 +130,22 @@
     DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
     cell.delegate = self;
     return cell;
+}
+
+-(void)updateWithProfile {
+    
+    User *user = [UserController sharedInstance].currentUserProfile;
+    
+    self.firstName = user.firstName;
+    [self.tableView reloadData];
+    
+//    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://locals.firebaseio.com/users"];
+//    [[ref queryOrderedByChild:@"height"]
+//     observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+//         
+//         NSLog(@"%@ was %@ meters tall", snapshot.key, snapshot.value[@"height"]);
+//     }];
+    
 }
 
 -(void)photoCellButtonTapped {

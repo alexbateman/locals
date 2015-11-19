@@ -14,6 +14,8 @@ static NSString *currentProfileLoadedNotification = @"currentProfileLoaded";
 @interface UserController : NSObject
 
 @property (strong, nonatomic, readonly) NSArray *locals;
+@property (strong, nonatomic, readonly)User *currentUserProfile;
+
 
 + (UserController *)sharedInstance;
 -(User *)createUser: (User *)user;

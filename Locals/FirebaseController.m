@@ -57,9 +57,9 @@
     return [FirebaseController base].authData.uid;
 }
 
-+ (void)fetchCurrentUser:(NSString *)email {
++ (void)fetchCurrentUser {
     [[FirebaseController userProfile] observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        NSDictionary *userDictionary;
+        NSDictionary *userDictionary = [NSDictionary new];
         if ([snapshot.value isKindOfClass:[NSNull class]]) {
 //            User *newUserProfile = [[UserController sharedInstance] createUser:email uid:[self currentUserUID]];
 //            userDictionary = newUserProfile.dictionaryRepresentation;
@@ -77,6 +77,8 @@
     }];
     
 }
+
+
 
 
 

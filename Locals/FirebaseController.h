@@ -16,5 +16,6 @@
 +(void) login:(NSString *)userEmail password:(NSString *)password;
 + (NSString *) currentUserUID;
 + (Firebase *)userProfile;
++ (void)fetchCurrentUser;
 
 @end
