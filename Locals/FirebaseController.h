@@ -17,5 +17,7 @@
 + (NSString *) currentUserUID;
 + (Firebase *)userProfile;
 + (void)fetchCurrentUser;
++ (void) logout;
+
 
 @end

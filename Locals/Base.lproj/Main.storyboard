@@ -74,6 +74,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nik-wm-31m"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +134,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIX-OM-Njb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign Up!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIX-OM-Njb">
                                 <rect key="frame" x="229" y="52" width="143" height="46"/>
                                 <animations/>
                                 <constraints>
@@ -153,7 +154,6 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButton:" destination="RHT-gL-zRq" eventType="touchUpInside" id="CIK-1P-9ct"/>
-                                    <action selector="signUpButton:" destination="RHT-gL-zRq" eventType="touchUpInside" id="DWe-zp-n3l"/>
                                     <segue destination="r68-o8-Lvh" kind="show" id="2DH-Qj-gVw"/>
                                 </connections>
                             </button>
@@ -178,6 +178,7 @@
                             <constraint firstItem="gcL-Pk-6y0" firstAttribute="centerX" secondItem="RIX-OM-Njb" secondAttribute="centerX" id="y4s-mN-ruj"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="email" destination="5Cu-1G-yyv" id="QbB-x7-h87"/>
                         <outlet property="password" destination="AEX-97-aMK" id="B00-fS-H07"/>
@@ -412,7 +413,7 @@
             </objects>
             <point key="canvasLocation" x="749" y="1085"/>
         </scene>
-        <!--User Table View Controller-->
+        <!--Title-->
         <scene sceneID="Xdt-46-Mai">
             <objects>
                 <tableViewController id="r68-o8-Lvh" customClass="UserTableViewController" sceneMemberID="viewController">
@@ -556,6 +557,15 @@
                             <outlet property="delegate" destination="r68-o8-Lvh" id="3mr-Gn-yL7"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="5tc-6k-ncw">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="e9m-Va-6fs">
+                            <connections>
+                                <action selector="logoutButton:" destination="r68-o8-Lvh" id="Ahb-Bb-WWL"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="B0n-We-K25"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="M5f-qT-g3t" kind="show" identifier="navSegue" id="VUN-vo-eF1"/>
                     </connections>
@@ -567,8 +577,9 @@
         <!--Navigation Controller-->
         <scene sceneID="fiX-4h-B65">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="D6A-uo-yxX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D6A-uo-yxX" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Oe-NS-eyC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -610,6 +621,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VUN-vo-eF1"/>
-        <segue reference="LSQ-WZ-2bs"/>
+        <segue reference="2DH-Qj-gVw"/>
+        <segue reference="B0n-We-K25"/>
     </inferredMetricsTieBreakers>
 </document>

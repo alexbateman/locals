@@ -10,7 +10,6 @@
 #import "User.h"
 #import "UserController.h"
 
-
 @implementation FirebaseController
 
 + (Firebase *)base {
@@ -26,12 +25,13 @@
             NSLog(@"%@",error);
         } else {
             [self login:userEmail password:password];
+
         }
     }];
  
 }
 
-+(void) login:(NSString *)userEmail password:(NSString *)password {
++(void) login:(NSString *)userEmail password:(NSString *)password{
     
     [self.base authUser:userEmail password:password withCompletionBlock:^(NSError *error, FAuthData *authData) {
         NSLog(@"%@",authData);
@@ -42,27 +42,35 @@
             
         } else {
             [FirebaseController userProfile];
+            [FirebaseController fetchCurrentUser];
+
         }
         
      
     }];
-}
+ }
+
 
 + (Firebase *)userProfile {
     return [[[FirebaseController base] childByAppendingPath:@"UserProfile/"] childByAppendingPath:[FirebaseController currentUserUID]];
 }
 
-
 + (NSString *) currentUserUID {
     return [FirebaseController base].authData.uid;
 }
+
++ (void) logout {
+    [[FirebaseController userProfile] unauth];
+}
+
 
 + (void)fetchCurrentUser {
     [[FirebaseController userProfile] observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSDictionary *userDictionary = [NSDictionary new];
         if ([snapshot.value isKindOfClass:[NSNull class]]) {
-//            User *newUserProfile = [[UserController sharedInstance] createUser:email uid:[self currentUserUID]];
-//            userDictionary = newUserProfile.dictionaryRepresentation;
+            User *user = [User new];
+            User *newUserProfile = [[UserController sharedInstance] createUser:user];
+            userDictionary = newUserProfile.dictionaryRepresentation;
             
         } else if([snapshot.value isKindOfClass:[NSDictionary class]]) {
             userDictionary = snapshot.value;
@@ -77,8 +85,6 @@
     }];
     
 }
-
-
 
 
 

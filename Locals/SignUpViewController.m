@@ -31,7 +31,7 @@
     self.email.delegate = self;
     self.password.delegate = self;
     
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+   // [self.navigationController setNavigationBarHidden:YES animated:YES];
     
 }
 
@@ -41,8 +41,11 @@
     return YES;
 }
 - (IBAction)nextButton:(id)sender {
-    
+    if ([FirebaseController currentUserUID]) {
+        NSLog(@"I'm already logged in");
+    } else {
     [FirebaseController login:self.email.text password:self.password.text];
+    }
 }
 
 

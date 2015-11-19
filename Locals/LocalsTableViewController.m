@@ -26,7 +26,7 @@
     self.user = [User new];
     self.user.firstName = @"Alex";
     self.user.city = @"Provo";
-    self.user.bio = @"Hey Im Alex, and I love all that my NYC has to offer! I am all about going out at night, grabbing some pizza, hitting up a concert, and hitting up local shops.";
+    self.user.bio = @"Hey Im Alex, and I love all that my NYC has to offer! I am all about going out at night, grabbing some pizza, hitting up a concert, and browsing local shops.";
     self.user.email = @"alex@localsapp.com";
     
 }

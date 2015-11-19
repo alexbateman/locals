@@ -30,12 +30,14 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+- (IBAction)logoutButton:(id)sender {
+    [FirebaseController logout];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self registerForNotifications];
-    [FirebaseController fetchCurrentUser];
     
 }
 
@@ -142,6 +144,7 @@
 }
 
 -(void)updateWithProfile {
+
     
     User *user = [UserController sharedInstance].currentUserProfile;
     

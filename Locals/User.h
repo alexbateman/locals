@@ -12,7 +12,7 @@
 static NSString * const EmailKey = @"email";
 static NSString * const FirstNameKey = @"firstName";
 static NSString * const CityKey = @"city";
-static NSData * const ProfileImageKey = @"profileImage";
+static NSString * const ProfileImageKey = @"profileImage";
 static NSString * const BioKey = @"bio";
 
 @interface User : NSObject
