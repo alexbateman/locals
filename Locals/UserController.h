@@ -16,6 +16,12 @@ static NSString *currentProfileLoadedNotification = @"currentProfileLoaded";
 @property (strong, nonatomic, readonly) NSArray *locals;
 @property (strong, nonatomic, readonly)User *currentUserProfile;
 
+@property (weak,nonatomic) NSString *signUpMessage;
+
+@property (weak,nonatomic) NSString *loginAlert;
+
+@property (weak,nonatomic) NSString *loginMessage;
+
 
 + (UserController *)sharedInstance;
 -(User *)createUser: (User *)user;

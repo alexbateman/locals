@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Locals/FirebaseController.m"
-            timestampString = "469599442.218894"
+            timestampString = "469603251.733654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "+createAccount:password:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "+createAccount:password:completion:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Locals/FirebaseController.m"
-            timestampString = "469599448.309045"
+            timestampString = "469603251.733654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "+login:password:"
             landmarkType = "5">
             <Locations>
@@ -58,11 +58,11 @@
                   moduleName = "Locals"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Alexander/Documents/locals/Locals/FirebaseController.m"
-                  timestampString = "469599460.245559"
+                  timestampString = "469603252.848291"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
                   offsetFromSymbolStart = "70">
                </Location>
                <Location
@@ -73,11 +73,11 @@
                   moduleName = "Locals"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Alexander/Documents/locals/Locals/FirebaseController.m"
-                  timestampString = "469599460.245991"
+                  timestampString = "469603252.848824"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
                   offsetFromSymbolStart = "74">
                </Location>
             </Locations>
@@ -90,44 +90,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Locals/FirebaseController.m"
-            timestampString = "469599448.902635"
+            timestampString = "469603251.733654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "+login:password:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Locals/FirebaseController.m"
-            timestampString = "469599450.716295"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "+createAccount:password:"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "+createAccount:password:completion:"
             landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__45+[FirebaseController createAccount:password:]_block_invoke"
+                  symbolName = "__56+[FirebaseController createAccount:password:completion:]_block_invoke"
                   moduleName = "Locals"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Alexander/Documents/locals/Locals/FirebaseController.m"
-                  timestampString = "469599460.249771"
+                  timestampString = "469603252.851223"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "155">
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "1006">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -137,7 +121,7 @@
                   moduleName = "Locals"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Alexander/Documents/locals/Locals/FirebaseController.m"
-                  timestampString = "469599460.250172"
+                  timestampString = "469603252.851774"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -152,7 +136,7 @@
                   moduleName = "Locals"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Alexander/Documents/locals/Locals/FirebaseController.m"
-                  timestampString = "469599460.250669"
+                  timestampString = "469603252.852327"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -169,11 +153,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Locals/FirebaseController.m"
-            timestampString = "469599452.798363"
+            timestampString = "469603251.733654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "+login:password:"
             landmarkType = "5">
          </BreakpointContent>
