@@ -90,7 +90,7 @@
     } else if (indexPath.row ==2) {
         return [self cellForCity];
     } else {
-        return [self cellForDescription];
+        return [self cellForBio];
     }
 
 
@@ -123,12 +123,21 @@
     cell.firstNameLabel.text = @"City";
     cell.delegate = self;
     
+    if (self.city) {
+        cell.nameTextField.text = self.city;
+    }
+    
     return cell;
 }
 
--(UITableViewCell *)cellForDescription {
+-(UITableViewCell *)cellForBio {
     DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
     cell.delegate = self;
+    
+    if (self.bio) {
+        cell.descriptionTextField.text = self.bio;
+    }
+    
     return cell;
 }
 
@@ -137,6 +146,8 @@
     User *user = [UserController sharedInstance].currentUserProfile;
     
     self.firstName = user.firstName;
+    self.city = user.city;
+    self.bio = user.bio;
     [self.tableView reloadData];
     
 //    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://locals.firebaseio.com/users"];
