@@ -9,6 +9,7 @@
 #import "SignUpViewController.h"
 #import "FirebaseController.h"
 #import "UserController.h"
+#import "User.h"
 
 @interface SignUpViewController ()<UITextFieldDelegate>
 
@@ -19,9 +20,24 @@
 
 @implementation SignUpViewController
 
+#warning add dismiss keyboard with tap outside
+//TODO: add dismiss keyboard with tap outside
+
 - (IBAction)signUpButton:(id)sender {
     
-    [FirebaseController createAccount:self.email.text password:self.password.text];
+    [FirebaseController createAccount:self.email.text password:self.password.text completion:^(bool success) {
+        if (success) {
+            
+            [UserController sharedInstance].isLoggedIn = YES;
+            [self performSegueWithIdentifier:@"signUpComplete" sender:nil];
+            
+        } else {
+            
+            [self signUpErrorMessage:[UserController sharedInstance].signUpMessage];
+        }
+    }];
+    
+   // [FirebaseController createAccount:self.email.text password:self.password.text];
 }
 
 
@@ -31,7 +47,7 @@
     self.email.delegate = self;
     self.password.delegate = self;
     
-   // [self.navigationController setNavigationBarHidden:YES animated:YES];
+   // [self.navigationController setNavigationBarHidden:YES animated:YES]; 
     
 }
 
@@ -53,6 +69,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)signUpErrorMessage:(NSString *)message{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alertController addAction:dismissAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
+
 
 /*
 #pragma mark - Navigation

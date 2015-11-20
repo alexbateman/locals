@@ -24,6 +24,8 @@ static NSString * const BioKey = @"bio";
 @property (nonatomic, strong) NSString *bio;
 @property (nonatomic, strong) NSString *UID;
 
+@property (assign, nonatomic) BOOL isLoggedIn;
+
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 - (NSDictionary *)dictionaryRepresentation;
