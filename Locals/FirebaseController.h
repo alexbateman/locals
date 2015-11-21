@@ -13,10 +13,11 @@
 
 + (Firebase *)base;
 +(void) createAccount:(NSString *)userEmail password:(NSString *)password completion:(void (^)(bool success))completion;
-+(void) login:(NSString *)userEmail password:(NSString *)password;
++(void) login:(NSString *)userEmail password:(NSString *)password completion:(void (^)(bool success))completion;
 + (NSString *) currentUserUID;
 + (Firebase *)userProfile;
 + (void)fetchCurrentUser;
 + (void) logout;
+
 
 @end
