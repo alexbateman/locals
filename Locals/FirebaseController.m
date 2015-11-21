@@ -47,6 +47,7 @@
     [self.base authUser:userEmail password:password withCompletionBlock:^(NSError *error, FAuthData *authData) {
         if (error != nil) {
             // an error occurred while attempting login
+           
             switch(error.code) {
                 case FAuthenticationErrorUserDoesNotExist:
                     // Handle invalid user

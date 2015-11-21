@@ -144,7 +144,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="nextButton:" destination="RHT-gL-zRq" eventType="touchUpInside" id="CIK-1P-9ct"/>
-                                    <segue destination="r68-o8-Lvh" kind="show" id="2DH-Qj-gVw"/>
+                                    <segue destination="qLN-uV-q9B" kind="show" id="2DH-Qj-gVw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhU-Tn-vXC">
@@ -158,7 +158,7 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpButton:" destination="RHT-gL-zRq" eventType="touchUpInside" id="ucH-VF-OLY"/>
-                                    <segue destination="r68-o8-Lvh" kind="show" identifier="signUpComplete" id="KNn-NQ-o3f"/>
+                                    <segue destination="qLN-uV-q9B" kind="show" identifier="signUpComplete" id="KNn-NQ-o3f"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1Q-1P-I3w">
@@ -296,7 +296,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="r68-o8-Lvh" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="vhk-Mg-SPg"/>
+                                    <segue destination="qLN-uV-q9B" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="vhk-Mg-SPg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -409,7 +409,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="r68-o8-Lvh" kind="show" id="LSQ-WZ-2bs"/>
+                                    <segue destination="qLN-uV-q9B" kind="show" id="LSQ-WZ-2bs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -473,9 +473,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="221"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-3s-Vb9">
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-3s-Vb9">
                                             <rect key="frame" x="200" y="11" width="200" height="200"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="4qy-IR-cXg"/>
+                                                <constraint firstAttribute="width" constant="200" id="MC4-d2-us4"/>
+                                            </constraints>
                                             <state key="normal" title="Image">
                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
@@ -601,7 +605,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzy-EZ-Csw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="282"/>
+            <point key="canvasLocation" x="1790" y="282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fiX-4h-B65">
@@ -643,14 +647,33 @@
             </objects>
             <point key="canvasLocation" x="-1220" y="1060"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hek-kJ-gWk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qLN-uV-q9B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hhG-5u-txJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r68-o8-Lvh" kind="relationship" relationship="rootViewController" id="f9h-sr-Bou"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXY-Ok-dTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="282"/>
+        </scene>
     </scenes>
     <resources>
         <image name="man-icon" width="900" height="900"/>
         <image name="placeholder-square" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VUN-vo-eF1"/>
-        <segue reference="KNn-NQ-o3f"/>
         <segue reference="B0n-We-K25"/>
+        <segue reference="vhk-Mg-SPg"/>
+        <segue reference="VUN-vo-eF1"/>
     </inferredMetricsTieBreakers>
 </document>
