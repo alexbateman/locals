@@ -156,18 +156,8 @@
     self.city = user.city;
     self.bio = user.bio;
     [self.tableView reloadData];
-    
-<<<<<<< HEAD
-//    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://locals.firebaseio.com/users"];
-//    [[ref queryOrderedByChild:@"height"]
-//     observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-//         
-//         NSLog(@"%@ was %@ meters tall", snapshot.key, snapshot.value[@"height"]);
-//     }];
-=======
->>>>>>> origin/feature/firebase
-    
 }
+
 
 -(void)photoCellButtonTapped {
    

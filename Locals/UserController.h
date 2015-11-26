@@ -24,6 +24,7 @@ static NSString *currentProfileLoadedNotification = @"currentProfileLoaded";
 
 
 + (UserController *)sharedInstance;
+
 -(User *)createUser: (User *)user;
 - (void)setCurrentUser:(NSDictionary *)dictionary;
 - (void)saveCurrentUser;
