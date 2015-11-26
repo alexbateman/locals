@@ -144,7 +144,11 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="nextButton:" destination="RHT-gL-zRq" eventType="touchUpInside" id="CIK-1P-9ct"/>
+<<<<<<< HEAD
                                     <segue destination="p8e-za-TrD" kind="show" id="2DH-Qj-gVw"/>
+=======
+                                    <segue destination="qLN-uV-q9B" kind="show" id="2DH-Qj-gVw"/>
+>>>>>>> origin/feature/firebase
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhU-Tn-vXC">
@@ -158,6 +162,10 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpButton:" destination="RHT-gL-zRq" eventType="touchUpInside" id="ucH-VF-OLY"/>
+<<<<<<< HEAD
+=======
+                                    <segue destination="qLN-uV-q9B" kind="show" identifier="signUpComplete" id="KNn-NQ-o3f"/>
+>>>>>>> origin/feature/firebase
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1Q-1P-I3w">
@@ -295,7 +303,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="p8e-za-TrD" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="vhk-Mg-SPg"/>
+=======
+                                    <segue destination="qLN-uV-q9B" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="vhk-Mg-SPg"/>
+>>>>>>> origin/feature/firebase
                                 </connections>
                             </button>
                         </subviews>
@@ -408,7 +420,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="p8e-za-TrD" kind="show" id="LSQ-WZ-2bs"/>
+=======
+                                    <segue destination="qLN-uV-q9B" kind="show" id="LSQ-WZ-2bs"/>
+>>>>>>> origin/feature/firebase
                                 </connections>
                             </button>
                         </subviews>
@@ -476,8 +492,13 @@
                                             <rect key="frame" x="200" y="11" width="200" height="200"/>
                                             <animations/>
                                             <constraints>
+<<<<<<< HEAD
                                                 <constraint firstAttribute="width" constant="200" id="ElT-Uj-ttw"/>
                                                 <constraint firstAttribute="height" constant="200" id="erw-lb-V6m"/>
+=======
+                                                <constraint firstAttribute="height" constant="200" id="4qy-IR-cXg"/>
+                                                <constraint firstAttribute="width" constant="200" id="MC4-d2-us4"/>
+>>>>>>> origin/feature/firebase
                                             </constraints>
                                             <state key="normal" title="Image">
                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -647,21 +668,36 @@
             <point key="canvasLocation" x="-1220" y="1060"/>
         </scene>
         <!--Navigation Controller-->
+<<<<<<< HEAD
         <scene sceneID="hP3-g8-idV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p8e-za-TrD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Lp-Jm-fwB">
+=======
+        <scene sceneID="hek-kJ-gWk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qLN-uV-q9B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hhG-5u-txJ">
+>>>>>>> origin/feature/firebase
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+<<<<<<< HEAD
                         <segue destination="r68-o8-Lvh" kind="relationship" relationship="rootViewController" id="sOK-VT-774"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVy-Ef-SMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+=======
+                        <segue destination="r68-o8-Lvh" kind="relationship" relationship="rootViewController" id="f9h-sr-Bou"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXY-Ok-dTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+>>>>>>> origin/feature/firebase
             </objects>
             <point key="canvasLocation" x="978" y="282"/>
         </scene>
@@ -671,8 +707,13 @@
         <image name="placeholder-square" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="2DH-Qj-gVw"/>
         <segue reference="B0n-We-K25"/>
+=======
+        <segue reference="B0n-We-K25"/>
+        <segue reference="vhk-Mg-SPg"/>
+>>>>>>> origin/feature/firebase
         <segue reference="VUN-vo-eF1"/>
     </inferredMetricsTieBreakers>
 </document>

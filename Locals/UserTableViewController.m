@@ -39,6 +39,10 @@
     
     [self registerForNotifications];
     
+    if ([UserController sharedInstance].currentUserProfile) {
+        [self updateWithProfile];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -153,12 +157,15 @@
     self.bio = user.bio;
     [self.tableView reloadData];
     
+<<<<<<< HEAD
 //    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://locals.firebaseio.com/users"];
 //    [[ref queryOrderedByChild:@"height"]
 //     observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
 //         
 //         NSLog(@"%@ was %@ meters tall", snapshot.key, snapshot.value[@"height"]);
 //     }];
+=======
+>>>>>>> origin/feature/firebase
     
 }
 
@@ -207,11 +214,11 @@
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+   // UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-    self.photo = UIImageJPEGRepresentation(image, 0.8);
+  //  self.photo = UIImageJPEGRepresentation(image, 0.8);
     
     [self.tableView reloadData];
     
