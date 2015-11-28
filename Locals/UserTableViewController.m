@@ -62,7 +62,7 @@
     [[UserController sharedInstance] createUser:user];
     
     [self performSegueWithIdentifier:@"navSegue" sender:sender];
-    
+        
 }
 
 -(void)textChanged:(NameCell *)cell {

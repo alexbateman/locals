@@ -14,7 +14,7 @@
 @implementation FirebaseController
 
 + (Firebase *)base {
-    return [[Firebase alloc] initWithUrl:@"http://locals.firebaseIO.com"];
+    return [[Firebase alloc] initWithUrl:@"http://locals.firebaseIO.com/"];
     
 }
 
