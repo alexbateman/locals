@@ -96,7 +96,7 @@
     }];
 }
 
-+ (Firebase *)userProfile {
++ (Firebase *) userProfile {
     return [[[FirebaseController base] childByAppendingPath:@"UserProfile/"] childByAppendingPath:[FirebaseController currentUserUID]];
 }
 

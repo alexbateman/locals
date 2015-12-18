@@ -42,6 +42,8 @@
     [self.password resignFirstResponder];
     return YES;
 }
+
+// This is the login button. I named it next before I added the signUpButton.
 - (IBAction)nextButton:(id)sender {
     if ([FirebaseController currentUserUID]) {
         NSLog(@"I'm already logged in");
