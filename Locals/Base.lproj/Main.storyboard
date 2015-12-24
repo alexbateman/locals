@@ -532,7 +532,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="e9m-Va-6fs">
                             <connections>
                                 <action selector="logoutButton:" destination="r68-o8-Lvh" id="Ahb-Bb-WWL"/>
-                                <segue destination="D6A-uo-yxX" kind="show" id="SKx-Bs-ywK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -609,6 +608,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VUN-vo-eF1"/>
-        <segue reference="KNn-NQ-o3f"/>
+        <segue reference="vhk-Mg-SPg"/>
     </inferredMetricsTieBreakers>
 </document>
