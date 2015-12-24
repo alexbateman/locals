@@ -150,7 +150,6 @@
 }
 
 -(void)updateWithProfile {
-
     
     User *user = [UserController sharedInstance].currentUserProfile;
     
