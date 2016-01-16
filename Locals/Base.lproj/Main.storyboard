@@ -538,6 +538,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="M5f-qT-g3t" kind="show" identifier="navSegue" id="VUN-vo-eF1"/>
+                        <segue destination="D6A-uo-yxX" kind="show" identifier="loggedOff" id="5mq-yo-Q1J"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzy-EZ-Csw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -607,7 +608,7 @@
         <image name="placeholder-square" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VUN-vo-eF1"/>
         <segue reference="KNn-NQ-o3f"/>
+        <segue reference="VUN-vo-eF1"/>
     </inferredMetricsTieBreakers>
 </document>

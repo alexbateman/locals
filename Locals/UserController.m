@@ -52,6 +52,12 @@
     [[FirebaseController userProfile] setValue:[self.currentUserProfile dictionaryRepresentation]];
 }
 
+- (NSArray *)locals {
+   [FirebaseController userProfile] observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+       <#code#>
+   }
+    
+}
 
 
 

@@ -31,8 +31,9 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (IBAction)logoutButton:(id)sender {
-//    [FirebaseController logout];
-    [[FirebaseController userProfile] unauth];
+    [FirebaseController logout];
+    
+    [self performSegueWithIdentifier:@"loggedOff" sender:nil];
 
 }
 
