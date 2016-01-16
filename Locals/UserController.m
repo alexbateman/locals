@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic)User *currentUserProfile;
 
+@property (strong, nonatomic) NSArray *locals;
+
 @end
 
 @implementation UserController
@@ -29,7 +31,28 @@
     return sharedInstance;
 }
 
+- (void)loadUsers {
+    [[FirebaseController userProfile] observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        NSDictionary *userDictionaries = snapshot.value;
+        NSMutableArray *usersMutable = [NSMutableArray array];
+        for (NSString *userDictionaryKey in userDictionaries) {
+            NSDictionary *userDictionary = userDictionaries[userDictionaryKey];
+            User *userProfile = [[User alloc]initWithDictionary:userDictionary];
+            
+            if (userProfile.firstName) {
+                
+                if (![userProfile.firstName isEqualToString:@""]) {
+                    [usersMutable addObject:userProfile];
+                }
+            }
+        }
+        
+        NSArray *sortedUsers = [[NSArray alloc]initWithArray:usersMutable];
+        [UserController sharedInstance].locals = sortedUsers;
+     
+     }];
 
+}
 
 #pragma create
 
@@ -52,12 +75,7 @@
     [[FirebaseController userProfile] setValue:[self.currentUserProfile dictionaryRepresentation]];
 }
 
-- (NSArray *)locals {
-   [FirebaseController userProfile] observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-       <#code#>
-   }
-    
-}
+
 
 
 

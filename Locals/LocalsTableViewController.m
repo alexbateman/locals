@@ -11,6 +11,7 @@
 #import "UserTableViewController.h"
 #import "UserController.h"
 #import "UserProfileViewController.h"
+#import "FirebaseController.h"
 
 @interface LocalsTableViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) User *user;
@@ -23,11 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.user = [User new];
-    self.user.firstName = @"Alex";
-    self.user.city = @"New York City";
-    self.user.bio = @"Hey Im Alex, and I love all that my NYC has to offer! I am all about going out at night, grabbing some pizza, hitting up a concert, and browsing local shops.";
-    self.user.email = @"alex@localsapp.com";
+//    self.user = [User new];
+//    self.user.firstName = @"Alex";
+//    self.user.city = @"New York City";
+//    self.user.bio = @"Hey Im Alex, and I love all that my NYC has to offer! I am all about going out at night, grabbing some pizza, hitting up a concert, and browsing local shops.";
+//    self.user.email = @"alex@localsapp.com";
+    
     
 }
 
@@ -46,7 +48,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toUserProfile"]) {
         UserProfileViewController *userProfile = segue.destinationViewController;
-      //  NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+//        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         userProfile.user = self.user;
         
     }
@@ -58,7 +60,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+
     return [UserController sharedInstance].locals.count;
 }
 
@@ -68,6 +70,10 @@
     cell.textLabel.text = self.user.firstName;
     cell.detailTextLabel.text = self.user.city;
     cell.imageView.image = [UIImage imageNamed:@"placeholder-square"];
+
+    User *user = [UserController sharedInstance].locals[indexPath.row];
+    
+    cell.textLabel.text = user.firstName;
     
     return cell;
 }

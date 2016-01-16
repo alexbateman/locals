@@ -14,6 +14,7 @@ static NSString *currentProfileLoadedNotification = @"currentProfileLoaded";
 @interface UserController : NSObject
 
 @property (strong, nonatomic, readonly) NSArray *locals;
+
 @property (strong, nonatomic, readonly)User *currentUserProfile;
 
 @property (weak,nonatomic) NSString *signUpMessage;
