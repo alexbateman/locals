@@ -16,6 +16,7 @@
 +(void) login:(NSString *)userEmail password:(NSString *)password completion:(void (^)(bool success))completion;
 + (NSString *) currentUserUID;
 + (Firebase *)userProfile;
++ (Firebase *) usersFirebase;
 + (void)fetchCurrentUser;
 + (void) logout;
 

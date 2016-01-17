@@ -96,8 +96,12 @@
     }];
 }
 
++ (Firebase *) usersFirebase {
+    return [[FirebaseController base] childByAppendingPath:@"UserProfile"];
+}
+
 + (Firebase *) userProfile {
-    return [[[FirebaseController base] childByAppendingPath:@"UserProfile/"] childByAppendingPath:[FirebaseController currentUserUID]];
+    return [[[FirebaseController base] childByAppendingPath:@"UserProfile"] childByAppendingPath:[FirebaseController currentUserUID]];
 }
 
 + (NSString *) currentUserUID {

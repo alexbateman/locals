@@ -30,6 +30,10 @@
 //    self.user.bio = @"Hey Im Alex, and I love all that my NYC has to offer! I am all about going out at night, grabbing some pizza, hitting up a concert, and browsing local shops.";
 //    self.user.email = @"alex@localsapp.com";
     
+    [[UserController sharedInstance] loadUsersWithCompletion:^{
+        [self.tableView reloadData];
+    }];
+    
     
 }
 

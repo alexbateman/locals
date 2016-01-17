@@ -31,27 +31,27 @@
     return sharedInstance;
 }
 
-- (void)loadUsers {
-    [[FirebaseController userProfile] observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+- (void)loadUsersWithCompletion:(void (^)())completion {
+    [[FirebaseController usersFirebase] observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSDictionary *userDictionaries = snapshot.value;
+        NSArray *userIDs = userDictionaries.allKeys;
+        
         NSMutableArray *usersMutable = [NSMutableArray array];
-        for (NSString *userDictionaryKey in userDictionaries) {
-            NSDictionary *userDictionary = userDictionaries[userDictionaryKey];
-            User *userProfile = [[User alloc]initWithDictionary:userDictionary];
+        for (NSString *key in userIDs) {
+            NSDictionary *userDictionary = userDictionaries[key];
             
-            if (userProfile.firstName) {
-                
-                if (![userProfile.firstName isEqualToString:@""]) {
-                    [usersMutable addObject:userProfile];
-                }
+            User *user = [[User alloc] initWithDictionary: userDictionary];
+            
+            if (user.firstName && ![user.firstName isEqualToString:@""]) {
+                [usersMutable addObject:user];
             }
         }
         
         NSArray *sortedUsers = [[NSArray alloc]initWithArray:usersMutable];
-        [UserController sharedInstance].locals = sortedUsers;
-     
-     }];
-
+        self.locals = sortedUsers;
+        
+        completion();
+    }];
 }
 
 #pragma create
